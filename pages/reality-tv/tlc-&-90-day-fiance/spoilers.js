@@ -23,9 +23,16 @@ export async function getStaticProps() {
     .get(`${process.env.API_URL_LOCAL}articles/category/spoilers`)
     .then((res) => res.data)
     .catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
-
+  if (!realityTv) {
+    return {
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: {
       realityTv,

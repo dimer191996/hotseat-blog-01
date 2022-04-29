@@ -24,9 +24,16 @@ export async function getStaticProps() {
     .get(`${process.env.API_URL_LOCAL}articles/category/short`)
     .then((res) => res.data)
     .catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
-
+  if (!stories) {
+    return {
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: {
       stories,

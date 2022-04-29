@@ -38,12 +38,15 @@ export async function getStaticProps() {
     .get(`${process.env.API_URL_LOCAL}articles/home/movies-entertainment`)
     .then((res) => res.data)
     .catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
 
   if (!ME) {
     return {
-      notFound: true,
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
     };
   }
   return {

@@ -24,9 +24,16 @@ export async function getStaticProps() {
     .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
     .then((res) => res.data)
     .catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
-
+  if (!M) {
+    return {
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: {
       M,

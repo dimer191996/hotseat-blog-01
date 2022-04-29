@@ -34,11 +34,14 @@ export async function getServerSideProps() {
     .get(`${process.env.API_URL_LOCAL}articles/tv`)
     .then((res) => res.data)
     .catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
   if (!realityTv) {
     return {
-      notFound: true,
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
     };
   }
   return {
