@@ -43,10 +43,7 @@ export async function getStaticProps() {
 
   if (!ME) {
     return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
+      notFound: true,
     };
   }
   return {

@@ -38,10 +38,7 @@ export async function getServerSideProps() {
     });
   if (!realityTv) {
     return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
+      notFound: true,
     };
   }
   return {

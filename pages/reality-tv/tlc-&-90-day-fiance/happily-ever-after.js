@@ -25,14 +25,7 @@ export async function getStaticProps() {
     .catch((error) => {
       console.log(error.message);
     });
-  if (!realityTv) {
-    return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
-    };
-  }
+
   return {
     props: {
       realityTv,

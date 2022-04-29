@@ -26,14 +26,7 @@ export async function getStaticProps() {
     .catch((error) => {
       console.log(error.message);
     });
-  if (!stories) {
-    return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
-    };
-  }
+
   return {
     props: {
       stories,

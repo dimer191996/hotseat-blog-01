@@ -189,10 +189,7 @@ export async function getStaticProps() {
     });
   if (!stories && !realityTv && !truecrime && !moviereviews) {
     return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
+      notFound: true,
     };
   }
   return {
