@@ -26,7 +26,11 @@ export async function getStaticProps() {
     .catch((error) => {
       console.log(error.message);
     });
-
+  if (!TC) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       TC: TC || null,

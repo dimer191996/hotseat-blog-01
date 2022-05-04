@@ -26,7 +26,11 @@ export async function getStaticProps() {
     .catch((error) => {
       console.log(error.message);
     });
-
+  if (!stories) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       stories: stories || null,
