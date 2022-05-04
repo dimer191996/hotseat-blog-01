@@ -187,11 +187,7 @@ export async function getStaticProps() {
     .catch((error) => {
       console.log(error.message);
     });
-  if (!stories && !realityTv && !truecrime && !moviereviews) {
-    return {
-      notFound: true,
-    };
-  }
+
   return {
     props: {
       realityTv,
