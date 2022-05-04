@@ -38,7 +38,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      realityTv,
+      realityTv: realityTv || null,
     },
   };
 }

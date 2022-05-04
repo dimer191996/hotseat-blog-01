@@ -29,7 +29,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      M,
+      M: M || null,
     },
   };
 }

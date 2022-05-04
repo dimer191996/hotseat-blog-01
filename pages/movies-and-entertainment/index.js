@@ -48,7 +48,7 @@ export async function getStaticProps() {
   }
   return {
     props: {
-      ME: ME,
+      ME: ME || null,
     },
   };
 }

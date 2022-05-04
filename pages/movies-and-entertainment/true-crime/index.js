@@ -29,7 +29,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      TC,
+      TC: TC || null,
     },
   };
 }

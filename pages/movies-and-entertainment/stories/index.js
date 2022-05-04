@@ -29,7 +29,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      stories,
+      stories: stories || null,
     },
   };
 }
