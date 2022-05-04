@@ -68,12 +68,11 @@ export default function NavBar() {
             <ul className="md:flex  md:space-x-6 border-t  md:items-center  md:justify-end grid grid-cols-3">
               {navEl.map((el, index) => (
                 <Link key={index} href={`${el.link}`}>
-                  <li className="hover:bg-gray-200   py-2   font-semibold cursor-pointer  lg:px-4 items-center justify-center flex">
-                    {/* <div className="px-2">{el.icon}</div> */}
-                    <div className="line-clamp-1">{el.name}</div>
-                  </li>{" "}
+                  <li className="hover:bg-gray-200 line-clamp-1   py-2   font-semibold cursor-pointer  lg:px-4 items-center justify-center flex">
+                    {el.name}
+                  </li>
                 </Link>
-              ))}{" "}
+              ))}
             </ul>
           </div>
         </div>

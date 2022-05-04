@@ -11,6 +11,30 @@ import SubscribeNewsLatter from "../../components/SubscribeNewsLatter";
 import YoutubeChannel from "../../components/YoutubeChannel";
 import WithScreen from "../../Layouts/WithScreen";
 
+export async function getServerSideProps({ params }) {
+  const article = await axios
+    .get(`${process.env.API_URL_LOCAL}article/` + params.slug, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.article)
+    .catch(({ err }) => console.log(err.message));
+
+  if (!article) {
+    return {
+      redirect: {
+        destination: "/404",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
+}
+
 const Post = ({ article }) => {
   const cleanDate = (date) => {
     return moment(date).fromNow();
@@ -178,27 +202,3 @@ const Post = ({ article }) => {
 };
 
 export default Post;
-
-export async function getServerSideProps({ params }) {
-  const article = await axios
-    .get(`${process.env.API_URL_LOCAL}article/` + params.slug, {
-      timeout: 10000,
-    })
-    .then((res) => res.data.article)
-    .catch(({ err }) => console.log(err.message));
-
-  if (!article) {
-    return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {
-      article,
-    },
-  };
-}
