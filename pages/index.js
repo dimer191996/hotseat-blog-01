@@ -8,7 +8,7 @@ import SeoPage from "../components/SeoPage";
 import YoutubeChannel from "../components/YoutubeChannel";
 import FacebookGroup from "../components/FacebookGroup";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const realityTv = await axios
     .get(`${process.env.API_URL_LOCAL}articles/home/tv`)
     .then((res) => res.data)
@@ -22,14 +22,12 @@ export async function getServerSideProps() {
     .catch((error) => {
       console.log(error.message);
     });
-
   const truecrime = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`)
     .then((res) => res.data)
     .catch((error) => {
       console.log(error.message);
     });
-
   const moviereviews = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
     .then((res) => res.data)

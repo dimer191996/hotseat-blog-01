@@ -19,9 +19,14 @@ export async function getServerSideProps({ params }) {
     .then((res) => res.data.article)
     .catch(({ err }) => console.log(err.message));
 
+  if (!article) {
+    return {
+      notfound: true,
+    };
+  }
   return {
     props: {
-      article,
+      article: article || null,
     },
   };
 }
