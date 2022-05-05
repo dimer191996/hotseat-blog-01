@@ -26,14 +26,10 @@ export async function getServerSideProps() {
     .catch((error) => {
       console.log(error.message);
     });
-  if (!TC) {
-    return {
-      notFound: true,
-    };
-  }
+
   return {
     props: {
-      TC: TC || null,
+      TC,
     },
   };
 }

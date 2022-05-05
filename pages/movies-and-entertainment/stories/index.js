@@ -26,14 +26,10 @@ export async function getServerSideProps() {
     .catch((error) => {
       console.log(error.message);
     });
-  if (!stories) {
-    return {
-      notFound: true,
-    };
-  }
+
   return {
     props: {
-      stories: stories || null,
+      stories,
     },
   };
 }

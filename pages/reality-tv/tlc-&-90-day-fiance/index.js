@@ -36,15 +36,9 @@ export async function getServerSideProps() {
       console.log(error.message);
     });
 
-  if (!realityTv) {
-    return {
-      notFound: true,
-    };
-  }
-
   return {
     props: {
-      realityTv: realityTv || null,
+      realityTv,
     },
   };
 }

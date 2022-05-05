@@ -22,12 +22,14 @@ export async function getServerSideProps() {
     .catch((error) => {
       console.log(error.message);
     });
+
   const truecrime = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`)
     .then((res) => res.data)
     .catch((error) => {
       console.log(error.message);
     });
+
   const moviereviews = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
     .then((res) => res.data)
@@ -41,7 +43,6 @@ export async function getServerSideProps() {
       stories,
       truecrime,
       moviereviews,
-      fallback: true,
     },
   };
 }

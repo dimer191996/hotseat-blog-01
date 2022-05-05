@@ -41,14 +41,9 @@ export async function getServerSideProps() {
       console.log(error.message);
     });
 
-  if (!ME) {
-    return {
-      notFound: true,
-    };
-  }
   return {
     props: {
-      ME: ME || null,
+      ME: ME,
     },
   };
 }
