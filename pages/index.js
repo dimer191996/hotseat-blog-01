@@ -8,7 +8,7 @@ import SeoPage from "../components/SeoPage";
 import YoutubeChannel from "../components/YoutubeChannel";
 import FacebookGroup from "../components/FacebookGroup";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const realityTv = await axios
     .get(`${process.env.API_URL_LOCAL}articles/home/tv`)
     .then((res) => res.data)
@@ -37,10 +37,11 @@ export async function getStaticProps() {
 
   return {
     props: {
-      realityTv: realityTv || null,
-      stories: stories || null,
-      truecrime: truecrime || null,
-      moviereviews: moviereviews || null,
+      realityTv,
+      stories,
+      truecrime,
+      moviereviews,
+      fallback: true,
     },
   };
 }

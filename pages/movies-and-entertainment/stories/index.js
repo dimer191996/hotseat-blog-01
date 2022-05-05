@@ -19,7 +19,7 @@ export default function stories({ stories }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const stories = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/short`)
     .then((res) => res.data)

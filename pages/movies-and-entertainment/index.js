@@ -33,7 +33,7 @@ export default function HomeMovies({ ME }) {
     </div>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const ME = await axios
     .get(`${process.env.API_URL_LOCAL}articles/home/movies-entertainment`)
     .then((res) => res.data)

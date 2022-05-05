@@ -20,10 +20,10 @@ export default function HomeTv({ realityTv }) {
             label: "TLC & 90 Day Fiance",
             link: "/reality-tv/tlc-&-90-day-fiance",
           },
-          {
-            label: "Married at First Sight ",
-            link: "/reality-tv/married-at-first-sight",
-          },
+          // {
+          //   label: "Married at First Sight ",
+          //   link: "/reality-tv/married-at-first-sight",
+          // },
         ]}
       />
     </div>

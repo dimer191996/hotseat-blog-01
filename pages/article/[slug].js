@@ -21,10 +21,7 @@ export async function getServerSideProps({ params }) {
 
   if (!article) {
     return {
-      redirect: {
-        destination: "/404",
-        permanent: false,
-      },
+      notfound: true,
     };
   }
 

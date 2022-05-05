@@ -19,7 +19,7 @@ export default function movies({ M }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const M = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
     .then((res) => res.data)
