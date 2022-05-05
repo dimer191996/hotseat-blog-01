@@ -8,6 +8,43 @@ import SeoPage from "../components/SeoPage";
 import YoutubeChannel from "../components/YoutubeChannel";
 import FacebookGroup from "../components/FacebookGroup";
 
+export async function getStaticProps() {
+  const realityTv = await axios
+    .get(`${process.env.API_URL_LOCAL}articles/home/tv`)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log(error.message);
+    });
+
+  const stories = await axios
+    .get(`${process.env.API_URL_LOCAL}articles/category/short`)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log(error.message);
+    });
+  const truecrime = await axios
+    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log(error.message);
+    });
+  const moviereviews = await axios
+    .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log(error.message);
+    });
+
+  return {
+    props: {
+      realityTv: realityTv || null,
+      stories: stories || null,
+      truecrime: truecrime || null,
+      moviereviews: moviereviews || null,
+    },
+  };
+}
+
 export default function Home({ realityTv, stories, truecrime, moviereviews }) {
   return (
     <SeoPage
@@ -160,40 +197,4 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
       </WithScreen>
     </SeoPage>
   );
-}
-
-export async function getStaticProps() {
-  const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/home/tv`)
-    .then((res) => res.data)
-    .catch((error) => {
-      console.log(error.message);
-    });
-  const stories = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/short`)
-    .then((res) => res.data)
-    .catch((error) => {
-      console.log(error.message);
-    });
-  const truecrime = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`)
-    .then((res) => res.data)
-    .catch((error) => {
-      console.log(error.message);
-    });
-  const moviereviews = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
-    .then((res) => res.data)
-    .catch((error) => {
-      console.log(error.message);
-    });
-
-  return {
-    props: {
-      realityTv,
-      stories,
-      truecrime,
-      moviereviews,
-    },
-  };
 }
