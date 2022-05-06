@@ -21,9 +21,12 @@ export default function movies({ M }) {
 
 export async function getServerSideProps() {
   const M = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/movie-review`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);

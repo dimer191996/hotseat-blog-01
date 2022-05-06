@@ -10,7 +10,7 @@ import FacebookGroup from "../components/FacebookGroup";
 
 export async function getStaticProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/home/tv`, {
+    .get(`${"https://blog-app-hot.herokuapp.com/api/"}articles/home/tv`, {
       timeout: 10000,
     })
     .then((res) => res.data.articles)
@@ -19,41 +19,45 @@ export async function getStaticProps() {
     });
 
   const stories = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/short`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/short`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
   const truecrime = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/truecrime`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
   const moviereviews = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/movie-review`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
-  if (!realityTv && !stories && !truecrime && !moviereviews) {
-    return {
-      notFound: true,
-    };
-  }
   return {
     props: {
-      realityTv,
-      stories,
-      truecrime,
-      moviereviews,
+      realityTv: realityTv || [],
+      stories: stories || [],
+      truecrime: truecrime || [],
+      moviereviews: moviereviews || [],
     },
   };
 }

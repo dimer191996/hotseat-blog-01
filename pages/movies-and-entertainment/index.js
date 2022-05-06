@@ -35,9 +35,12 @@ export default function HomeMovies({ ME }) {
 }
 export async function getStaticProps() {
   const ME = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/home/movies-entertainment`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/home/movies-entertainment`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);

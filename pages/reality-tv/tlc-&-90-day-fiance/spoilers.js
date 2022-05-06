@@ -20,9 +20,12 @@ export default function spoilers({ realityTv }) {
 }
 export async function getServerSideProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/spoilers`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/spoilers`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);

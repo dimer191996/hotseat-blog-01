@@ -30,7 +30,7 @@ export default function tlcRealityTv({ realityTv }) {
 }
 export async function getServerSideProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/tv`, {
+    .get(`${"https://blog-app-hot.herokuapp.com/api/"}articles/category/tv`, {
       timeout: 10000,
     })
     .then((res) => res.data.articles)

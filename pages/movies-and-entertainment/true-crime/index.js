@@ -21,9 +21,12 @@ export default function trueCrime({ TC }) {
 
 export async function getServerSideProps() {
   const TC = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/truecrime`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
