@@ -19,7 +19,7 @@ export default function trueCrime({ TC }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const TC = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`, {
       timeout: 10000,

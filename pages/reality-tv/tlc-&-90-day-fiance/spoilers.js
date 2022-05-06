@@ -18,7 +18,7 @@ export default function spoilers({ realityTv }) {
     />
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const realityTv = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/spoilers`, {
       timeout: 10000,

@@ -28,7 +28,7 @@ export default function tlcRealityTv({ realityTv }) {
     </div>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const realityTv = await axios
     .get(`${process.env.API_URL_LOCAL}articles/category/tv`, {
       timeout: 10000,
