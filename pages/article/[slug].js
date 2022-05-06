@@ -17,7 +17,7 @@ export async function getServerSideProps({ params }) {
       timeout: 10000,
     })
     .then((res) => res.data.article)
-    .catch(({ err }) => console.log(err.message));
+    .catch(({ err }) => console.log(err));
 
   if (!article) {
     return {

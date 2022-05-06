@@ -5,7 +5,7 @@ export default function tlcRealityTv({ realityTv }) {
   return (
     <div className=" my-10">
       <PageLayout
-        articles={realityTv.articles}
+        articles={realityTv}
         hearder={" 90 Day Fiance & Other TLC Shows"}
         pageDescription={
           "The latest and 90 Day Fiance News , 90 Day Fiance:Before The 90 Days, 90 Day Fiance:Happily Ever After, 90 Day Fiance Season 9..., in-depth reports, recaps, reviews, episode summaries, more..."
@@ -28,17 +28,19 @@ export default function tlcRealityTv({ realityTv }) {
     </div>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/tv`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/tv`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      realityTv,
+      realityTv: realityTv || [],
     },
   };
 }

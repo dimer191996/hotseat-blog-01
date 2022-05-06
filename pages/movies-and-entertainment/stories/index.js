@@ -4,7 +4,7 @@ import PageLayout from "../../../Layouts/PageLayout";
 export default function stories({ stories }) {
   return (
     <PageLayout
-      articles={stories.articles}
+      articles={stories}
       hearder={"Stories & Factcs"}
       pageDescription={
         " The latest and Stories, Facts, List, Relationship Stories,list, in-depth understanding of life ,more..."
@@ -19,17 +19,19 @@ export default function stories({ stories }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const stories = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/short`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/short`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      stories,
+      stories: stories || [],
     },
   };
 }

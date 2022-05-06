@@ -6,7 +6,7 @@ export default function HomeMovies({ ME }) {
     <div className=" my-10">
       <PageLayout
         category="none"
-        articles={ME.articles}
+        articles={ME}
         hearder={" MOVIES & ENTERTAINMENT"}
         pageDescription={
           " Find the latest movies, music, TV shows , \n True Crime Stories, True Stories and comics reviews that are worth your time."
@@ -33,17 +33,19 @@ export default function HomeMovies({ ME }) {
     </div>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const ME = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/home/movies-entertainment`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/home/movies-entertainment`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      ME: ME,
+      ME: ME || [],
     },
   };
 }

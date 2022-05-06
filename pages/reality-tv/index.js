@@ -6,7 +6,7 @@ export default function HomeTv({ realityTv }) {
     <div className=" my-10">
       <PageLayout
         category="none"
-        articles={realityTv.articles}
+        articles={realityTv}
         hearder={"TLC Tv Shows & Other Reality TV"}
         pageDescription={
           " The latest and breaking reality TV news, in-depth reports, recaps, reviews, episode summaries, and info on the biggest reality television shows."
@@ -29,17 +29,19 @@ export default function HomeTv({ realityTv }) {
     </div>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/tv`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/tv`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      realityTv,
+      realityTv: realityTv || [],
     },
   };
 }

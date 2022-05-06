@@ -4,7 +4,7 @@ import PageLayout from "../../../Layouts/PageLayout";
 export default function happilyEverAfter({ realityTv }) {
   return (
     <PageLayout
-      articles={realityTv.articles}
+      articles={realityTv}
       hearder={" 90 Day Fiance:Happily Ever After"}
       pageDescription={
         "The latest and 90 Day Fiance News, 90 Day Fiance:Happily Ever After , in-depth reports, recaps, reviews, episode summaries, more..."
@@ -18,17 +18,19 @@ export default function happilyEverAfter({ realityTv }) {
     />
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/happyEverAfter`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/happyEverAfter`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      realityTv,
+      realityTv: realityTv || [],
     },
   };
 }

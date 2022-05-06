@@ -4,7 +4,7 @@ import PageLayout from "../../../Layouts/PageLayout";
 export default function spoilers({ realityTv }) {
   return (
     <PageLayout
-      articles={realityTv.articles}
+      articles={realityTv}
       hearder={"TLC & 90 Day Fiance:Spoilers"}
       pageDescription={
         "The latest and 90 Day Fiance News , in-depth reports, recaps, reviews, episode summaries, more..."
@@ -18,17 +18,19 @@ export default function spoilers({ realityTv }) {
     />
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/spoilers`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/spoilers`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      realityTv,
+      realityTv: realityTv || [],
     },
   };
 }

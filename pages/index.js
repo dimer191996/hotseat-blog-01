@@ -10,31 +10,44 @@ import FacebookGroup from "../components/FacebookGroup";
 
 export async function getStaticProps() {
   const realityTv = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/home/tv`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/home/tv`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   const stories = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/short`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/short`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
   const truecrime = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
   const moviereviews = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/movie-review`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
+  if (!realityTv && !stories && !truecrime && !moviereviews) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       realityTv,
@@ -64,7 +77,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             <br /> TLC & 90 Day Fiance news, and ​celebrity gossip, more...!
           </p>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4  border-b pb-5">
-            {realityTv.articles.slice(0, 2)?.map((data) => (
+            {realityTv.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
@@ -75,7 +88,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
           </h2>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5 border-b">
             <FacebookGroup />
-            {realityTv.articles.slice(2, 6)?.map((data) => (
+            {realityTv.slice(2, 6)?.map((data) => (
               <div key={data._id}>
                 <SmallCard article={data} />
               </div>
@@ -87,25 +100,25 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
 
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4  py-5">
             <section></section>
-            {realityTv.articles.slice(6, 8)?.map((data) => (
+            {realityTv.slice(6, 8)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}
             <section>
-              {realityTv.articles.slice(8, 11)?.map((data) => (
+              {realityTv.slice(8, 11)?.map((data) => (
                 <div key={data._id}>
                   <SmallCard imgShow={false} article={data} />
                 </div>
               ))}
             </section>
-            {realityTv.articles.slice(11, 13)?.map((data) => (
+            {realityTv.slice(11, 13)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}{" "}
             <section></section>
-            {realityTv.articles.slice(13, 18)?.map((data) => (
+            {realityTv.slice(13, 18)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>
@@ -126,14 +139,14 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             more...!
           </p>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4 gap-y-4 ">
-            {truecrime.articles.slice(0, 2)?.map((data) => (
+            {truecrime.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}
           </div>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b gap-x-4 gap-y-4  py-5">
-            {stories.articles.slice(0, 2)?.map((data) => (
+            {stories.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
@@ -141,7 +154,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
           </div>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5">
             <YoutubeChannel />
-            {stories.articles.slice(2, 6)?.map((data) => (
+            {stories.slice(2, 6)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>
@@ -149,7 +162,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             <FacebookGroup />
           </div>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b gap-x-4 gap-y-4   py-5">
-            {stories.articles.slice(6, 8)?.map((data) => (
+            {stories.slice(6, 8)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
@@ -157,7 +170,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
           </div>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5">
             <YoutubeChannel />
-            {stories.articles.slice(8, 12)?.map((data) => (
+            {stories.slice(8, 12)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>
@@ -178,12 +191,12 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             more...!
           </p>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4 ">
-            {moviereviews.articles.slice(0, 2)?.map((data) => (
+            {moviereviews.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}
-            {moviereviews.articles.slice(2, 4)?.map((data) => (
+            {moviereviews.slice(2, 4)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>

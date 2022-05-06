@@ -6,21 +6,9 @@ import {
   EmailShareButton,
   FacebookMessengerShareButton,
   FacebookShareButton,
-  HatenaShareButton,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  LivejournalShareButton,
   MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
   TelegramShareButton,
-  TumblrShareButton,
   TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
   WhatsappShareButton,
   WorkplaceShareButton,
 } from "react-share";
@@ -29,22 +17,9 @@ import {
   EmailIcon,
   FacebookIcon,
   FacebookMessengerIcon,
-  HatenaIcon,
-  InstapaperIcon,
-  LineIcon,
-  LinkedinIcon,
-  LivejournalIcon,
   MailruIcon,
-  OKIcon,
-  PinterestIcon,
-  PocketIcon,
-  RedditIcon,
   TelegramIcon,
-  TumblrIcon,
   TwitterIcon,
-  ViberIcon,
-  VKIcon,
-  WeiboIcon,
   WhatsappIcon,
   WorkplaceIcon,
 } from "react-share";
@@ -64,36 +39,50 @@ export default function ShareArticle({ slug }) {
       >
         <div className="flex flex-col  space-y-4 ">
           <FacebookMessengerShareButton
-            url={`${process.env.API_URL_ARTICLE}${slug}`}
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
           >
             <FacebookMessengerIcon size={28} round={true} />
           </FacebookMessengerShareButton>
 
-          <FacebookShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <FacebookShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <FacebookIcon size={28} round={true} />
           </FacebookShareButton>
 
-          <TwitterShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <TwitterShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <TwitterIcon size={28} round={true} />
           </TwitterShareButton>
 
-          <EmailShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <EmailShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <EmailIcon size={28} round={true} />
           </EmailShareButton>
 
-          <WhatsappShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <WhatsappShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <WhatsappIcon size={28} round={true} />
           </WhatsappShareButton>
 
-          <TelegramShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <TelegramShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <TelegramIcon size={28} round={true} />
           </TelegramShareButton>
 
-          <MailruShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <MailruShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <MailruIcon size={28} round={true} />
           </MailruShareButton>
 
-          <WorkplaceShareButton url={`${process.env.API_URL_ARTICLE}${slug}`}>
+          <WorkplaceShareButton
+            url={`${"https://hilarious-druid-15a4a5.netlify.app/article/"}${slug}`}
+          >
             <WorkplaceIcon size={28} round={true} />
           </WorkplaceShareButton>
         </div>

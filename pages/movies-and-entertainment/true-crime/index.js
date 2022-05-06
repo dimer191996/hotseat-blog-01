@@ -4,7 +4,7 @@ import PageLayout from "../../../Layouts/PageLayout";
 export default function trueCrime({ TC }) {
   return (
     <PageLayout
-      articles={TC.articles}
+      articles={TC}
       hearder={"  True crime TC to read online "}
       pageDescription={
         "   From serial killers to shocking current events, these true crime TC prove that sometimes real life is a lot darker than fiction..."
@@ -19,17 +19,19 @@ export default function trueCrime({ TC }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const TC = await axios
-    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`)
-    .then((res) => res.data)
+    .get(`${process.env.API_URL_LOCAL}articles/category/truecrime`, {
+      timeout: 10000,
+    })
+    .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
     });
 
   return {
     props: {
-      TC,
+      TC: TC || [],
     },
   };
 }
