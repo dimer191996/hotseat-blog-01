@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import { useLocation } from "react-router";
+import { useRouter } from "next/router";
 
 function SubscribeNewsLatter(props) {
-  const location = "";
+  const router = useRouter();
   const [success, setSuccess] = useState(false);
   useEffect(() => {
     if (window.location.search.includes("success=true")) {
@@ -17,23 +17,13 @@ function SubscribeNewsLatter(props) {
           <form
             name="susbcribe"
             method="POST"
-            action={`${location.pathname}/?success=true`}
+            action={`${router.asPath}?success=true`}
             data-netlify="true"
             id="sqv-comment-form-media"
             className="flex justify-center items-center"
           >
             <input type="hidden" name="form-name" value="susbcribe" />
-            <div className=" ">
-              {!success ? (
-                " "
-              ) : (
-                <span className=" flex ease-in-out justify-center items-center transition-opacity duration-500">
-                  <p className=" px-2 rounded-md shadow-md text-center font-bold bg-green-600 text-white">
-                    Thanks you for your Subscription !
-                  </p>
-                </span>
-              )}{" "}
-            </div>
+
             <div className="pl-3 flex flex-col space-y-4  ">
               <input
                 id="email"
@@ -58,6 +48,17 @@ function SubscribeNewsLatter(props) {
               </button>
             </div>
           </form>
+          <div className=" ">
+            {!success ? (
+              " "
+            ) : (
+              <span className=" flex ease-in-out justify-center items-center transition-opacity duration-500">
+                <p className=" px-2 rounded-md shadow-md text-center font-bold bg-green-600 text-white">
+                  Thanks you for your Subscription !
+                </p>
+              </span>
+            )}{" "}
+          </div>
           <span className="  justify-center my-2 items-center ease-in-out transition-opacity duration-500">
             {!props.removedesc && (
               <p className="  text-gray-900 font-bold text-center text-2xl mb-2">
