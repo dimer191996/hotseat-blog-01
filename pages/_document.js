@@ -32,13 +32,8 @@ export default function Document() {
 
       <script
         async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADS_PUB_KEY}`}
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4491397756399283`}
         crossOrigin="anonymous"
-      ></script>
-
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-VCL4RNBM4L"
       ></script>
 
       <body>
