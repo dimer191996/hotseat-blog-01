@@ -6,8 +6,7 @@ export default function Default({ children }) {
   return (
     <>
       <NavBar />
-
-      <main>{children}</main>
+      <main> {children}</main>
       <Footer />
     </>
   );

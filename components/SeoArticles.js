@@ -1,4 +1,4 @@
-import { NextSeo } from "next-seo";
+import { ArticleJsonLd, NextSeo } from "next-seo";
 
 let conanical = (category) => {
   switch (category) {
@@ -54,7 +54,8 @@ const SeoArticle = ({ article, children }) => (
         ],
       }}
     />
-    <p>{children}</p>
+
+    {children}
   </>
 );
 

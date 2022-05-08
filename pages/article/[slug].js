@@ -10,6 +10,7 @@ import ShareArticle from "../../components/ShareArticle";
 import SubscribeNewsLatter from "../../components/SubscribeNewsLatter";
 import YoutubeChannel from "../../components/YoutubeChannel";
 import WithScreen from "../../Layouts/WithScreen";
+import { NewsArticleJsonLd } from "next-seo";
 
 export async function getServerSideProps({ params }) {
   const article = await axios
@@ -161,6 +162,12 @@ const Post = ({ article }) => {
               ></div>
             </div>
             <hr className="my-2" />
+            <FloatingButton />
+            <div id="comment" className=" h-20 ">
+              <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
+                {"  Comming Soon, We're Working the comment section"}
+              </div>
+            </div>
             <section>
               <div className=" space-y-2">
                 <p className=" text-3xl font-bold">
@@ -170,7 +177,7 @@ const Post = ({ article }) => {
               </div>
             </section>
             <hr className="my-2" />
-            <div className=" flex justify-center  col-span-12 my-4">
+            {/* <div className=" flex justify-center  col-span-12 my-4">
               <div id="comment invisible"></div>
               <a href="https://www.buymeacoffee.com/hotseatmag">
                 <img
@@ -179,14 +186,8 @@ const Post = ({ article }) => {
                   className="h-15"
                 />
               </a>
-            </div>
+            </div> */}
           </section>
-          <FloatingButton />
-          <div id="comment" className=" ">
-            <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
-              {"  Comming Soon, We're Working on it"}
-            </div>
-          </div>
         </div>
         <section>
           <MoreArticles category={article.category} />
