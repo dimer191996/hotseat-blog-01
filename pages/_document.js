@@ -35,14 +35,7 @@ export default function Document() {
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADS_PUB_KEY}`}
         crossOrigin="anonymous"
       ></script>
-      <ins
-        class="adsbygoogle"
-        style={{ display: "block", textAlign: "center" }}
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
-        data-ad-client="ca-pub-4491397756399283"
-        data-ad-slot="2168142036"
-      ></ins>
+
       <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-VCL4RNBM4L"

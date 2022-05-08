@@ -17,27 +17,15 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
 
-      {/* <!-- A little help for the Netlify post-processing bots --> */}
-      {/* <form
-        name="contact"
-        netlify
-        netlify-honeypot="bot-field"
-        action="/"
-        hidden
-      >
-        <input type="text" name="author" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
-      </form>
-      <form
-        name="susbcribe"
-        netlify
-        netlify-honeypot="bot-field"
-        action="/"
-        hidden
-      >
-        <input type="email" name="email" />
-      </form> */}
+      <ins
+        class="adsbygoogle"
+        style={{ display: "block", textAlign: "center" }}
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-4491397756399283"
+        data-ad-slot="2168142036"
+      ></ins>
+
       <Default>
         <Component {...pageProps} />
       </Default>
