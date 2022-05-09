@@ -87,6 +87,18 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               </div>
             ))}
           </div>
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <h2 className=" px-4 border-b font-bold text-2xl pb-5 pt-5 text-center">
             Reality Tv News
           </h2>
@@ -101,7 +113,18 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               <SubscribeNewsLatter removedesc={true} />
             </section>
           </div>
-
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4  py-5">
             <section></section>
             {realityTv.slice(6, 8)?.map((data) => (
@@ -121,6 +144,18 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
                 <ArticleCard article={data} />
               </div>
             ))}{" "}
+            <ins
+              class="adsbygoogle"
+              style={{
+                display: "block",
+                textAlign: "center",
+                backgroundColor: "#eeee40",
+              }}
+              data-ad-layout="in-article"
+              data-ad-format="fluid"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="2168142036"
+            ></ins>
             <section></section>
             {realityTv.slice(13, 18)?.map((data) => (
               <div key={data._id}>
@@ -172,6 +207,18 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               </div>
             ))}
           </div>
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5">
             <YoutubeChannel />
             {stories.slice(8, 12)?.map((data) => (
