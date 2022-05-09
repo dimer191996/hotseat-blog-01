@@ -29,7 +29,6 @@ function MyApp({ Component, pageProps }) {
       gtag("config", "UA-211802929-1", "none");
         `}
       </Script>
-
       <Default>
         <Component {...pageProps} />
       </Default>

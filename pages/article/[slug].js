@@ -58,6 +58,18 @@ const Post = ({ article }) => {
               </div>
             </header>
           </section>
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <section>
             <div className=" border-t border-black">
               <div className=" my-5 flex gap-y-2 gap-x-2 mx-4">
@@ -141,7 +153,7 @@ const Post = ({ article }) => {
                   <hr className="mt-2" />
                 </div>
               )}
-
+              <div id="ezoic-pub-ad-placeholder-106"> </div>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
@@ -160,6 +172,7 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
+              <div id="ezoic-pub-ad-placeholder-109"> </div>
             </div>
             <hr className="my-2" />
             <FloatingButton />

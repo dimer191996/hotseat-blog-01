@@ -44,11 +44,14 @@ export default function PageLayout({
               </div>
             </div>
           </section>
+
           <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
             {articles.slice(0, 2)?.map((data) => (
               <ArticleCard key={data._id} article={data} />
             ))}
           </div>
+
+          <div id="ezoic-pub-ad-placeholder-111"> </div>
 
           <hearder className=" border-t  flex border-b flex-col items-center">
             <div className=" my-5 border-b bg-gray-300 py-2">
@@ -72,7 +75,19 @@ export default function PageLayout({
               <ArticleCard key={data._id} article={data} />
             ))}
           </div>
-
+          <div id="ezoic-pub-ad-placeholder-110"> </div>
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className="  grid md:grid-cols-2 2xl:grid-cols-3">
             <YoutubeChannel />
             {articles.slice(4, 8)?.map((data) => (
@@ -88,7 +103,18 @@ export default function PageLayout({
               <ArticleCard key={data._id} article={data} />
             ))}
           </div>
-
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
             <FacebookGroup />
             {articles.slice(10, 12)?.map((data) => (
@@ -110,6 +136,18 @@ export default function PageLayout({
               </div>
             ))}
           </div>
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className="  flex justify-center items-center  border-t bg-white">
             <SubscribeNewsLatter />
           </div>
@@ -125,6 +163,7 @@ export default function PageLayout({
               <ArticleCard key={data._id} article={data} />
             ))}
           </div>
+
           <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
             {articles.slice(22, 24)?.map((data) => (
               <div key={data._id}>
@@ -144,6 +183,18 @@ export default function PageLayout({
               </div>
             ))}
           </div>
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className=" grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0  ">
             {articles.slice(26, 28)?.map((data) => (
               <ArticleCard key={data._id} article={data} />
