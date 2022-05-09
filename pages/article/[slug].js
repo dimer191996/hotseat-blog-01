@@ -70,6 +70,19 @@ const Post = ({ article }) => {
             data-ad-client="ca-pub-4491397756399283"
             data-ad-slot="2168142036"
           ></ins>
+          <hr className="my-2" />
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <section>
             <div className=" border-t border-black">
               <div className=" my-5 flex gap-y-2 gap-x-2 mx-4">
@@ -127,6 +140,7 @@ const Post = ({ article }) => {
               </div>
             </div>
           </section>
+
           <section>
             <YoutubeChannel title={article.title} video={article.video} />
             <div className="mt-5">
@@ -153,7 +167,7 @@ const Post = ({ article }) => {
                   <hr className="mt-2" />
                 </div>
               )}
-              <div id="ezoic-pub-ad-placeholder-106"> </div>
+              <div id="ezoic-pub-ad-placeholder-105"> </div>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
@@ -172,7 +186,7 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
-              <div id="ezoic-pub-ad-placeholder-109"> </div>
+              <div id="ezoic-pub-ad-placeholder-104"> </div>
             </div>
             <hr className="my-2" />
             <FloatingButton />
@@ -190,16 +204,6 @@ const Post = ({ article }) => {
               </div>
             </section>
             <hr className="my-2" />
-            {/* <div className=" flex justify-center  col-span-12 my-4">
-              <div id="comment invisible"></div>
-              <a href="https://www.buymeacoffee.com/hotseatmag">
-                <img
-                  src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png"
-                  alt="Buy US A Coffee"
-                  className="h-15"
-                />
-              </a>
-            </div> */}
           </section>
         </div>
         <section>
