@@ -29,7 +29,7 @@ export default function HomeTv({ realityTv }) {
     </div>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const realityTv = await axios
     .get(`${"https://blog-app-hot.herokuapp.com/api/"}articles/tv`, {
       timeout: 10000,

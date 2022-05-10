@@ -8,7 +8,7 @@ import SeoPage from "../components/SeoPage";
 import YoutubeChannel from "../components/YoutubeChannel";
 import FacebookGroup from "../components/FacebookGroup";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const realityTv = await axios
     .get(`${"https://blog-app-hot.herokuapp.com/api/"}articles/home/tv`, {
       timeout: 10000,
