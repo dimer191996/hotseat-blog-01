@@ -32,12 +32,12 @@ export default function ShareArticle({ slug }) {
   }
 
   return (
-    <div className=" sticky top-0 z-50 ">
+    <div className=" sticky top-20 sm:top-0 z-30 ">
       <div
         onClick={share}
-        className=" absolute md:-left-16 -left-10 border-r bg-white   p-1 top-24 sm:mt-28 "
+        className=" md:absolute md:-left-16 -left-10 border-r pt-4  bg-white   p-1 top-24 sm:mt-28 "
       >
-        <div className="flex flex-col  space-y-4 ">
+        <div className="md:flex flex-col  md:space-y-4 space-x-3 sm:space-x-0  ">
           <FacebookMessengerShareButton
             url={`${"https://www.hotseatmag.com/article/"}${slug}`}
           >

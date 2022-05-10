@@ -40,7 +40,7 @@ const Post = ({ article }) => {
   return (
     <SeoArticle article={article}>
       <WithScreen width=" relative lg:w-[45%] md:w-[55%] ">
-        <div className="lg:mx-12 relative md:mx-0  mx-2 sm:ml-0 ml-10">
+        <div className="lg:mx-12 relative md:mx-0  mx-2 sm:ml-0 ">
           <ShareArticle slug={article.slug} />
 
           <section className=" flex flex-col">
@@ -185,6 +185,9 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
+              {article.sanitizedHTML2 && (
+                <YoutubeChannel title={article.title} video={article.video1} />
+              )}
             </div>
             <hr className="my-2" />
             <FloatingButton />
