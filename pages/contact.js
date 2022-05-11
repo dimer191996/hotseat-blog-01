@@ -1,6 +1,7 @@
 import { MailIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";
 import WithScreen from "../Layouts/WithScreen";
+import Head from "next/head";
 
 export default function contact() {
   const [success, setSuccess] = useState(false);
@@ -12,6 +13,19 @@ export default function contact() {
   }, []);
   return (
     <WithScreen>
+      <Head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+          name="viewport"
+          content="user-scalable=yes, initial-scale=1.0, width=device-width"
+        />
+        <title>Contact Us | HotSeatMag</title>
+
+        <meta
+          name="description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+      </Head>
       <div className=" border-b">
         <div className=" flex justify-center my-8">
           <div className=" md:w-1/2">

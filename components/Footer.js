@@ -46,16 +46,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li className=" lg:text-start text-center">
+                {" "}
+                <Link href="/disclaimer" className="hover:underline">
+                  Quick Disclaimer
+                </Link>
+              </li>
+              <li className=" lg:text-start text-center">
                 <Link href="/terms-conditions" className="hover:underline">
                   Terms And Conditions
                 </Link>
               </li>{" "}
-              <li className=" lg:text-start text-center">
-                {" "}
-                <Link href="/terms-conditions" className="hover:underline">
-                  Terms And Conditions
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

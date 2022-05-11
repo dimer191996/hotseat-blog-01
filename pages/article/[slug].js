@@ -1,4 +1,3 @@
-import { ChevronDownIcon, GiftIcon } from "@heroicons/react/solid";
 import axios from "axios";
 import Image from "next/image";
 import moment from "moment";
@@ -58,7 +57,7 @@ const Post = ({ article }) => {
               </div>
             </header>
           </section>
-
+          <div id="ezoic-pub-ad-placeholder-106"> </div>
           <section>
             <div className=" border-t border-black">
               <div className=" my-5 flex gap-y-2 gap-x-2 mx-4">
@@ -205,9 +204,9 @@ const Post = ({ article }) => {
               </div>
             </section>
             <hr className="my-2" />
-            <div id="ezoic-pub-ad-placeholder-106"> </div>
           </section>
         </div>
+        <div id="ezoic-pub-ad-placeholder-106"> </div>
         <section>
           <MoreArticles category={article.category} />
         </section>

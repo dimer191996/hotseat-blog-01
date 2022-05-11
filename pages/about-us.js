@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import MoreArticles from "../components/MoreArticles";
 import SubscribeNewsLatter from "../components/SubscribeNewsLatter";
@@ -6,6 +7,24 @@ import WithScreen from "../Layouts/WithScreen";
 export default function aboutUs() {
   return (
     <div>
+      <Head>
+        <title>About Us | HotSeatMag</title>
+
+        <meta
+          name="description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+
+        <meta property="og:title" content="About Us | HotSeatMag" />
+
+        <meta property="og:url" content="https://www.hotseatmag.com/about-us" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+      </Head>
       <WithScreen>
         <div className="prose pt-20 border-b  ">
           <header>
@@ -71,7 +90,6 @@ export default function aboutUs() {
         </div>
         <SubscribeNewsLatter />
       </WithScreen>
-      <MoreArticles category={"tv"} />
     </div>
   );
 }

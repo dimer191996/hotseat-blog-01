@@ -13,12 +13,14 @@ export default function Document() {
       />
       <meta property="fb:app_id" content={process.env.FB_APP_ID} />
       <meta name="p:domain_verify" content={process.env.P_DOMAIN_VERIFY} />
-
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
       <meta
         name="google-site-verification"
         content="AySyKKneKOxxtntn4fnsZqo_BEN30KI5caMaXJLRwFI"
       />
-      <meta property="og:site_name" content="hotseatmag.com" />
+      <meta property="og:site_name" content="hotseatmag" />
+
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"

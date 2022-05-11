@@ -6,10 +6,29 @@ import copyright2 from "../assets/images/copyright.jpg";
 import copyright3 from "../assets/images/copyright1.jpg";
 import SubscribeNewsLatter from "../components/SubscribeNewsLatter";
 import MoreArticles from "../components/MoreArticles";
+import Head from "next/head";
 
 export default function copyright() {
   return (
     <div>
+      <Head>
+        <title>Copyright | HotSeatMag</title>
+
+        <meta
+          name="description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+
+        <meta property="og:title" content="Copyright | HotSeatMag" />
+
+        <meta property="og:url" content="https://www.hotseatmag.com/about-us" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+      </Head>
       <WithScreen>
         {" "}
         <div className="prose ">
