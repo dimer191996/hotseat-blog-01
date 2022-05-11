@@ -29,9 +29,9 @@ export default function copyright() {
           content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
         />
       </Head>
-      <WithScreen>
+      <WithScreen width=" md:w-1/2 px-2 w-full">
         {" "}
-        <div className="prose ">
+        <div className=" prose  prose-md   lg:prose-xl   prose-a:text-red-800 ">
           <header className=" my-10">
             <h1 className=" w-full  font-sans uppercase   ">
               Hot Seat Media Copyright

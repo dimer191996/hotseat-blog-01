@@ -5,7 +5,7 @@ import WithScreen from "../Layouts/WithScreen";
 
 export default function disclaimer() {
   return (
-    <WithScreen>
+    <WithScreen width=" md:w-1/2 px-2 w-full">
       <Head>
         <title>Disclaimer | HotSeatMag</title>
 
@@ -16,7 +16,10 @@ export default function disclaimer() {
 
         <meta property="og:title" content="Disclaimer | HotSeatMag" />
 
-        <meta property="og:url" content="https://www.hotseatmag.com/about-us" />
+        <meta
+          property="og:url"
+          content="https://www.hotseatmag.com/disclaimer"
+        />
 
         <meta property="og:locale" content="en_US" />
         <meta
@@ -25,7 +28,7 @@ export default function disclaimer() {
         />
       </Head>
       <div className="  flex flex-row-reverse justify-center mt-20 md:mt-12 mb-28">
-        <div class=" prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800 ">
+        <div class=" prose prose-lg  lg:prose-xl   prose-a:text-red-800 ">
           <h2 className="py-4 text-xl flex justify-center items-center font-sans">
             DISCLAIMER
           </h2>

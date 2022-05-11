@@ -12,15 +12,20 @@ export default function contact() {
     }
   }, []);
   return (
-    <WithScreen>
+    <WithScreen width="">
       <Head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta
-          name="viewport"
-          content="user-scalable=yes, initial-scale=1.0, width=device-width"
-        />
+
         <title>Contact Us | HotSeatMag</title>
 
+        <meta property="og:title" content="Copyright | HotSeatMag" />
+
+        <meta
+          property="og:url"
+          content="https://www.hotseatmag.com/contact-us"
+        />
+
+        <meta property="og:locale" content="en_US" />
         <meta
           name="description"
           content="All the latest movie news, movie trailers & reviews - and the same for TV, too."

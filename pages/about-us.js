@@ -25,8 +25,8 @@ export default function aboutUs() {
           content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
         />
       </Head>
-      <WithScreen>
-        <div className="prose pt-20 border-b  ">
+      <WithScreen width=" md:w-1/2 px-2 w-full">
+        <div className=" prose prose-md   lg:prose-xl   prose-a:text-red-800 pt-20 border-b  ">
           <header>
             <h1 className=" w-full  font-sans uppercase   ">
               About Hot Seat Media

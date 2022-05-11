@@ -1,9 +1,24 @@
+import Head from "next/head";
 import Link from "next/link";
 
 export default function login() {
   return (
     <div>
-      {" "}
+      <Head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>Login | HotSeatMag</title>
+
+        <meta property="og:title" content="Login | HotSeatMag" />
+
+        <meta property="og:url" content="https://www.hotseatmag.com/login" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta
+          name="description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+      </Head>
       <div className="my-10 border-b">
         <div
           id=""
