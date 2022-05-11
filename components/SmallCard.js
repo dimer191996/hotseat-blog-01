@@ -17,6 +17,7 @@ export default function SmallCard({
             <div className={"relative " + imgSize}>
               <Image
                 src={article.image}
+                alt={article.description}
                 className=" rounded shadow-sm"
                 objectFit="cover"
                 layout="fill"
