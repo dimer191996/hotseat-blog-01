@@ -1,10 +1,10 @@
 function Error({ statusCode }) {
   return (
-    <p>
+    <div className=" flex justify-center text-xl font-bold">
       {statusCode
-        ? `An error ${statusCode} occurred on server`
-        : "An error occurred on client"}
-    </p>
+        ? `Sorry An error ${statusCode} occurred on server,:) Please Back To The Home page`
+        : "Sorry An error occurred on client, :) Please Back To The Home page"}
+    </div>
   );
 }
 
