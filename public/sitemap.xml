@@ -33,7 +33,7 @@
     <changefreq>daily</changefreq>
   </url>
    <url>
-    <loc>https://www.hotseatmag.com/movies-and-entertainment/stories/topics</loc>
+    <loc>https://www.hotseatmag.com/movies-and-entertainment/stories</loc>
     <changefreq>daily</changefreq>
   </url>
    <url>
@@ -72,10 +72,7 @@
     <loc>https://www.hotseatmag.com/article/are-the-yakuza-really-that-dangerous</loc>
     <changefreq>daily</changefreq>
   </url>
-  <url>
-    <loc>https://www.hotseatmag.com/stories/true-crime-stories</loc>
-    <changefreq>daily</changefreq>
-  </url>
+
   <url>
     <loc>https://www.hotseatmag.com/article/top-20-most-disturbing-true-crime-stories-on-ask-reddit</loc>
     <changefreq>daily</changefreq>
@@ -117,23 +114,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hotseatmag.com/tv/tlc/90-day-fiance-happy-ever-after</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://www.hotseatmag.com/copyright</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hotseatmag.com/tv/tlc/90-day-fiance</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://www.hotseatmag.com/article/how-danielle-from-90-day-fiance-is-doing-today</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hotseatmag.com/tv/tlc/90-day-fiance-spoilers</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -161,19 +146,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hotseatmag.com/tv/tlc/happy-ever-after</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://www.hotseatmag.com/privacy</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://www.hotseatmag.com/article/the-promise-of-90-day-fiance-whats-the-reality</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hotseatmag.com/article/tv/tlc</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -198,10 +175,6 @@
   </url>
   <url>
     <loc>https://www.hotseatmag.com/article/5-titanic-stories-you-probably-didnt-know-about</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hotseatmag.com/stories</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -250,10 +223,6 @@
   </url>
   <url>
     <loc>https://www.hotseatmag.com/article/ksbg-paris-twitter-video-reddit-girl-shoots-cousin-and-herself-what-exactly-happened-or-ksbg-paris</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hotseatmag.com/tv/tlc/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -377,15 +346,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://www.hotseatmag.com/hot/topics</loc>
+    <loc>https://www.hotseatmag.com/topics</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://www.hotseatmag.com/about-us</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://www.hotseatmag.com/movie-reviews</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -448,27 +413,24 @@
     <loc>https://www.hotseatmag.com/article/johnny-and-ella-relationship-status</loc>
     <changefreq>daily</changefreq>
   </url>
-     <url>
-    <loc>https://www.hotseatmag.com/tv/tlc</loc>
-    <changefreq>daily</changefreq>
-  </url>
-      <url>
+    
+  <url>
     <loc>https://www.hotseatmag.com/article/the-real-reason-why-michael-jessen-is-divorcing-juliana-custodio</loc>
     <changefreq>daily</changefreq>
   </url>
-      <url>
+  <url>
     <loc>https://www.hotseatmag.com/article/meet-the-90-day-single-life-season-2-cast-members-or-90-day-fiance</loc>
     <changefreq>daily</changefreq>
   </url>
-      <url>
+  <url>
     <loc>https://www.hotseatmag.com/article/90-day-fiance-hot-seat-why-ben-and-mahogany-deactivated-their-instagram-profiles</loc>
     <changefreq>daily</changefreq>
   </url>
-      <url>
+  <url>
     <loc>https://www.hotseatmag.com/article/after-meeting-steven-alina-opens-up-about-her-struggles-both-financially-and-in-her-personal-life</loc>
     <changefreq>daily</changefreq>
   </url>
-      <url>
+  <url>
     <loc>https://www.hotseatmag.com/article/should-i-be-afraid-to-buy-youtube-likes-and-views</loc>
     <changefreq>daily</changefreq>
   </url>
