@@ -17,7 +17,7 @@ function SubscribeNewsLatter(props) {
           <form
             name="susbcribe"
             method="POST"
-            action={`${router.asPath}?success=true`}
+            action={`/?success=true`}
             data-netlify="true"
             id="sqv-comment-form-media"
             className="flex justify-center items-center"
