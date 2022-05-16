@@ -158,6 +158,7 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
+
               {article.sanitizedHTML1 && (
                 <div>
                   <hr className="my-2" />

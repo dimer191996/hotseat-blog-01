@@ -15,14 +15,14 @@ function SubscribeNewsLatter(props) {
       <div className="md:flex md:justify-center md:items-center px-5 bg-gray-200 py-2 ">
         <div className=" flex flex-col-reverse ">
           <form
-            name="susbcribe"
+            name="subscription"
             method="POST"
-            action={`/?success=true`}
+            action={`${router.asPath}?success=true`}
             data-netlify="true"
             id="sqv-comment-form-media"
             className="flex justify-center items-center"
           >
-            <input type="hidden" name="form-name" value="susbcribe" />
+            <input type="hidden" name="form-name" value="subscription " />
 
             <div className="pl-3 flex flex-col space-y-4  ">
               <input
