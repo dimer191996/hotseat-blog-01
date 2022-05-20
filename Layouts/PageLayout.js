@@ -23,7 +23,7 @@ export default function PageLayout({
       category={category}
     >
       <div className="flex justify-center ">
-        <div className=" lg:w-1/2 md:w-4/5 px-4">
+        <div className=" lg:w-1/2 md:w-4/5 px-4 border-b">
           <section className=" z-auto  flex flex-col items-center">
             <div className="   ">
               <div className="   my-2 py-2">

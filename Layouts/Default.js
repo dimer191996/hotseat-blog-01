@@ -11,15 +11,14 @@ export default function Default({ children }) {
         style={{
           display: "block",
           textAlign: "center",
-          backgroundColor: "#eeee40",
+          backgroundColor: "#eeee",
         }}
         data-ad-layout="in-article"
         data-ad-format="fluid"
         data-ad-client="ca-pub-4491397756399283"
         data-ad-slot="2168142036"
       ></ins>
-      <main> {children}</main>
-      <Footer />
+      <main> {children}</main> <Footer />
     </>
   );
 }

@@ -5,7 +5,7 @@ import SocialMedia from "./SocialMedia";
 export default function Footer() {
   return (
     <div>
-      <footer className=" bg-white dark:bg-gray-800">
+      <footer className=" bg-white border-t dark:bg-gray-800">
         <div className="md:flex pb-10 pt-4 my  justify-center items-center ">
           <SocialMedia />
           <div className=" flex justify-center  pr-10">

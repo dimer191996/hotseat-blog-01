@@ -113,22 +113,19 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               <SubscribeNewsLatter removedesc={true} />
             </section>
           </div>{" "}
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4  py-5">
-            <section>
-              {" "}
-              <ins
-                class="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  backgroundColor: "#eeee40",
-                }}
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
-              ></ins>
-            </section>
             {realityTv.slice(6, 8)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
@@ -141,32 +138,29 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
                 </div>
               ))}
             </section>{" "}
-            {realityTv.slice(11, 13)?.map((data) => (
+            {realityTv.slice(11, 14)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}{" "}
-            <section>
-              {" "}
-              <ins
-                class="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  backgroundColor: "#eeee40",
-                }}
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
-              ></ins>
-            </section>
-            {realityTv.slice(13, 18)?.map((data) => (
+            {realityTv.slice(14, 18)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
-          </div>
+          </div>{" "}
+          <ins
+            class="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              backgroundColor: "#eeee40",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
           <section className="flex lg:mx-20 justify-center">
             <SubscribeNewsLatter />
           </section>

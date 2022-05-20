@@ -38,8 +38,8 @@ const Post = ({ article }) => {
 
   return (
     <SeoArticle article={article}>
-      <WithScreen width=" relative lg:w-[45%] md:w-[55%] ">
-        <div className="lg:mx-12 relative md:mx-0  mx-2 sm:ml-0 ">
+      <WithScreen width=" relative  lg:w-[45%] md:w-[55%] ">
+        <div className="lg:mx-12  relative md:mx-0  sm:ml-0 ">
           <ShareArticle slug={article.slug} />
 
           <section className=" flex flex-col">
@@ -120,7 +120,7 @@ const Post = ({ article }) => {
             style={{
               display: "block",
               textAlign: "center",
-              backgroundColor: "#eeee40",
+              backgroundColor: "#eeee",
             }}
             data-ad-layout="in-article"
             data-ad-format="fluid"
@@ -133,7 +133,7 @@ const Post = ({ article }) => {
             style={{
               display: "block",
               textAlign: "center",
-              backgroundColor: "#eeee40",
+              backgroundColor: "#eeee",
             }}
             data-ad-layout="in-article"
             data-ad-format="fluid"
@@ -141,18 +141,13 @@ const Post = ({ article }) => {
             data-ad-slot="2168142036"
           ></ins>
           <section>
-            <div className="mt-5">
+            <div className="mt-5 mx-4">
               <div
                 className="prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
-              {article.sanitizedHTML && (
-                <div>
-                  {" "}
-                  <hr className="my-2" />
-                  <FacebookGroup />
-                  <hr className="my-2" />
-                </div>
+              {article.sanitizedHTML2 && (
+                <YoutubeChannel title={article.title} video={article.video} />
               )}
               <div
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
@@ -171,9 +166,7 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
               ></div>
-              {article.sanitizedHTML2 && (
-                <YoutubeChannel title={article.title} video={article.video} />
-              )}
+
               <div
                 className="prose prose-xl mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML3 }}
@@ -185,10 +178,19 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
-              {article.sanitizedHTML2 && (
-                <YoutubeChannel title={article.title} video={article.video1} />
-              )}
             </div>
+            <ins
+              class="adsbygoogle"
+              style={{
+                display: "block",
+                textAlign: "center",
+                backgroundColor: "#eeee",
+              }}
+              data-ad-layout="in-article"
+              data-ad-format="fluid"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="2168142036"
+            ></ins>
             <hr className="my-2" />
             <FloatingButton />
             <div id="comment" className=" h-20 ">
@@ -204,10 +206,8 @@ const Post = ({ article }) => {
                 <p className=" text-lg">We can help.</p>
               </div>
             </section>
-            <hr className="my-2" />
           </section>
         </div>
-        <div id="ezoic-pub-ad-placeholder-106"> </div>
         <section>
           <MoreArticles category={article.category} />
         </section>
