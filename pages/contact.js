@@ -19,7 +19,7 @@ export default function contact() {
 
           <title>Contact Us | HotSeatMag</title>
 
-          <meta property="og:title" content="Copyright | HotSeatMag" />
+          <meta property="og:title" content="Contact Us | HotSeatMag" />
 
           <meta
             property="og:url"
