@@ -186,26 +186,12 @@ const Post = ({ article }) => {
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
             </div>
-            <section className=" overflow-hidden">
-              <ins
-                class="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  backgroundColor: "#eeee",
-                }}
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
-                data-full-width-responsive="true"
-              ></ins>
-            </section>
+
             <hr className="my-2" />
             <FloatingButton />
             <div id="comment" className=" h-20 ">
               <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
-                {"  Comming Soon, We're Working the comment section"}
+                <p> Comming Soon, We're Working the comment section</p>
               </div>
             </div>
             <section>
