@@ -75,7 +75,7 @@ export default function PageLayout({
               <ArticleCard key={data._id} article={data} />
             ))}
           </div>
-          <div id="ezoic-pub-ad-placeholder-110"> </div>
+
           <ins
             class="adsbygoogle"
             style={{
@@ -95,6 +95,24 @@ export default function PageLayout({
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
             <FacebookGroup />
           </div>
 
@@ -135,19 +153,26 @@ export default function PageLayout({
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
           </div>
-          <ins
-            class="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              backgroundColor: "#eeee40",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
+
           <div className="  flex justify-center items-center  border-t bg-white">
             <SubscribeNewsLatter />
           </div>

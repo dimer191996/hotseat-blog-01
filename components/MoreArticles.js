@@ -39,9 +39,7 @@ export default function MoreArticles({ category }) {
             data-ad-slot="9911443569"
             data-full-width-responsive="true"
           ></ins>
-          {articles?.slice(3, 8).map((el, index) => (
-            <SmallCard key={index} article={el} />
-          ))}
+
           <ins
             class="adsbygoogle"
             style={{ display: "block", backgroundColor: "#eeee" }}
@@ -51,6 +49,9 @@ export default function MoreArticles({ category }) {
             data-ad-slot="9911443569"
             data-full-width-responsive="true"
           ></ins>
+          {articles?.slice(3, 8).map((el, index) => (
+            <SmallCard key={index} article={el} />
+          ))}
         </div>
       </div>
     </div>
