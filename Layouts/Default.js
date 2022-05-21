@@ -6,18 +6,16 @@ export default function Default({ children }) {
   return (
     <>
       <NavBar />
-      <ins
-        class="adsbygoogle"
-        style={{
-          display: "block",
-          textAlign: "center",
-          backgroundColor: "#eeee",
-        }}
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
-        data-ad-client="ca-pub-4491397756399283"
-        data-ad-slot="2168142036"
-      ></ins>
+      {/* <div className="px-5">
+        <ins
+          class="adsbygoogle"
+          style={{ display: "block", overflow: "hidden" }}
+          data-ad-client="ca-pub-4491397756399283"
+          data-ad-slot="9308808331"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div> */}
       <main> {children}</main> <Footer />
     </>
   );

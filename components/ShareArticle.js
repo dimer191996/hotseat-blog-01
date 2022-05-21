@@ -73,18 +73,6 @@ export default function ShareArticle({ slug }) {
           >
             <TelegramIcon size={28} round={true} />
           </TelegramShareButton>
-
-          <MailruShareButton
-            url={`${"https://www.hotseatmag.com/article/"}${slug}`}
-          >
-            <MailruIcon size={28} round={true} />
-          </MailruShareButton>
-
-          <WorkplaceShareButton
-            url={`${"https://www.hotseatmag.com/article/"}${slug}`}
-          >
-            <WorkplaceIcon size={28} round={true} />
-          </WorkplaceShareButton>
         </div>
       </div>
     </div>

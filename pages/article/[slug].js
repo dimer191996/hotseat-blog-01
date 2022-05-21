@@ -115,31 +115,38 @@ const Post = ({ article }) => {
               </div>
             </div>
           </section>
-          <ins
-            class="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              backgroundColor: "#eeee",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
-          <br />
-          <ins
-            class="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              backgroundColor: "#eeee",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
+          {/* <section>
+            <ins
+              class="adsbygoogle"
+              style={{
+                display: "block",
+                textAlign: "center",
+                overflow: "hidden",
+                backgroundColor: "#eeee",
+              }}
+              data-ad-layout="in-article"
+              data-ad-format="fluid"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="2168142036"
+              data-full-width-responsive="true"
+            ></ins>
+            <br />
+            <ins
+              class="adsbygoogle"
+              style={{
+                display: "block",
+                textAlign: "center",
+                backgroundColor: "#eeee",
+                overflow: "hidden",
+              }}
+              data-ad-layout="in-article"
+              data-ad-format="fluid"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="2168142036"
+              data-full-width-responsive="true"
+            ></ins>
+          </section> */}
+
           <section className="px-4">
             <div className="mt-5">
               <div
@@ -179,18 +186,21 @@ const Post = ({ article }) => {
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
             </div>
-            <ins
-              class="adsbygoogle"
-              style={{
-                display: "block",
-                textAlign: "center",
-                backgroundColor: "#eeee",
-              }}
-              data-ad-layout="in-article"
-              data-ad-format="fluid"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="2168142036"
-            ></ins>
+            <section className=" overflow-hidden">
+              <ins
+                class="adsbygoogle"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  backgroundColor: "#eeee",
+                }}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-4491397756399283"
+                data-ad-slot="2168142036"
+                data-full-width-responsive="true"
+              ></ins>
+            </section>
             <hr className="my-2" />
             <FloatingButton />
             <div id="comment" className=" h-20 ">
