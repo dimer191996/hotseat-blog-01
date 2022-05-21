@@ -211,7 +211,6 @@ const Post = ({ article }) => {
         <section>
           <MoreArticles category={article.category} />
         </section>
-        <hr className="my-2" />
       </WithScreen>
     </SeoArticle>
   );

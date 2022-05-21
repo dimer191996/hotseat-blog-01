@@ -24,12 +24,33 @@ export default function MoreArticles({ category }) {
 
   return (
     <div className=" flex  justify-center">
-      <div className=" w-[90%]  border-t-2 my-5">
+      <div className=" w-[90%]   my-5">
         <div className="h-6 text-center">{loading ? "loading" : ""}</div>
         <div className=" grid lg:grid-cols-2 md:grid-cols-1">
-          {articles?.slice(0, 8).map((el, index) => (
+          {articles?.slice(0, 3).map((el, index) => (
             <SmallCard key={index} article={el} />
           ))}
+          <ins
+            class="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-format="fluid"
+            data-ad-layout-key="-gq+t-1c-fj+xa"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="9911443569"
+            data-full-width-responsive="true"
+          ></ins>
+          {articles?.slice(3, 8).map((el, index) => (
+            <SmallCard key={index} article={el} />
+          ))}
+          <ins
+            class="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-format="fluid"
+            data-ad-layout-key="-gq+t-1c-fj+xa"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="9911443569"
+            data-full-width-responsive="true"
+          ></ins>
         </div>
         <ins
           class="adsbygoogle"

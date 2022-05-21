@@ -149,18 +149,6 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               </div>
             ))}
           </div>{" "}
-          <ins
-            class="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              backgroundColor: "#eeee40",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
           <section className="flex lg:mx-20 justify-center">
             <SubscribeNewsLatter />
           </section>
@@ -236,6 +224,15 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               </div>
             ))}
             <FacebookGroup />
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block", backgroundColor: "#eeee" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
           </div>
         </section>
         <div className=" px-4 flex items-center justify-center font-bold text-xl rounded-full border border-black hover:bg-gray-50 cursor-pointer my-5">
@@ -261,6 +258,15 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block", backgroundColor: "#eeee" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
           </div>
           <div className=" px-4 flex items-center justify-center font-bold text-xl rounded-full border border-black hover:bg-gray-50 cursor-pointer my-5">
             <span>Read More</span>{" "}

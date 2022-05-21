@@ -33,6 +33,15 @@ export default function () {
         </div>
         <div className="lg:w-1/2 h md:2/3">
           <div className=" w-full  border-b md:grid md:grid-cols-2">
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
             {Data.filter((post) => {
               if (query === "") {
                 return post;
@@ -42,7 +51,48 @@ export default function () {
                 return post;
               }
             })
-              .slice(0, 20)
+              .slice(0, 9)
+              .map((post, index) => (
+                <Link href={post.link} key={index}>
+                  <div className={` m-4 bg-${post.color}-600`}>
+                    {post.article && (
+                      <div>
+                        <div className=" border-t py-2 ">
+                          <p className=" cursor-pointer hover:underline text-blue-600 line-clamp-2">
+                            {post.name}
+                          </p>
+                        </div>
+                        <p className="text-sm font-bold line-clamp-3">
+                          {" "}
+                          <span className=" text-gray-400 ">
+                            {post.createdAt} -
+                          </span>{" "}
+                          {post.description}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </Link>
+              ))}
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-format="fluid"
+              data-ad-layout-key="-gq+t-1c-fj+xa"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="9911443569"
+              data-full-width-responsive="true"
+            ></ins>
+            {Data.filter((post) => {
+              if (query === "") {
+                return post;
+              } else if (
+                post.name.toLowerCase().includes(query.toLowerCase())
+              ) {
+                return post;
+              }
+            })
+              .slice(9, 20)
               .map((post, index) => (
                 <Link href={post.link} key={index}>
                   <div className={` m-4 bg-${post.color}-600`}>
