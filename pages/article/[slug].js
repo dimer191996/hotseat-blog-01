@@ -40,7 +40,7 @@ const Post = ({ article }) => {
     <SeoArticle article={article}>
       <WithScreen width=" relative  lg:w-[45%] md:w-[55%] ">
         <div className="lg:mx-12  relative md:mx-0  sm:ml-0 ">
-          <ShareArticle slug={article.slug} />
+          {/* <ShareArticle slug={article.slug} /> */}
 
           <section className=" flex flex-col">
             <header className="flex p-3">
@@ -57,13 +57,10 @@ const Post = ({ article }) => {
               </div>
             </header>
           </section>
-          <div id="ezoic-pub-ad-placeholder-106"> </div>
+
           <section>
-            <div className=" border-t border-black">
-              <div className=" my-5 flex gap-y-2 gap-x-2 mx-4">
-                {/* <div className="bg-red-700 text-white flex p-1 rounded-lg cursor-pointer hover:bg-red-800 duration-500 ease-out px-2">
-                  <SaveIcon className=" h-6 text-gray-100 px-2" /> Save
-                </div> */}
+            <div className=" px-3">
+              <div className=" my-5 flex gap-y-2 gap-x-2">
                 <div className="bg-red-800 flex p-1 text-white rounded-lg cursor-pointer hover:bg-green-800 duration-500 ease-out px-2">
                   Views :{" "}
                   <span className=" px-2  font-bold">{article.views}</span>
@@ -76,8 +73,8 @@ const Post = ({ article }) => {
               </div>
             </div>
 
-            <div className=" flex justify-center">
-              <div className="relative h-[20rem]  w-full ">
+            <div className=" flex justify-center p-2">
+              <div className="relative h-[20rem] w-full ">
                 <Image
                   src={article.image}
                   className=" rounded shadow-sm"

@@ -23,8 +23,8 @@ export default function Footer() {
         </div>
         <Categories />
         <div className="flex mt-10 justify-center items-center">
-          <div className=" lg:w-1/2 md:w-3/4 w-full  bg-slate-100 rounded-lg ">
-            <ul className=" grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 mt-4 px-3 font-semibold   sm:justify-center sm:mt-0">
+          <div className=" lg:w-1/2 md:w-3/4 bg-slate-100 rounded-lg ">
+            <ul className=" grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mt-4 px-3 font-semibold   sm:justify-center sm:mt-0">
               <li className=" lg:text-start text-center">
                 <Link href="/about-us" className="hover:underline">
                   About Us

@@ -50,9 +50,9 @@ export default function Categories() {
   return (
     <div id="topics">
       <WithScreen width="sm:w-full border-t  border-b md:w-1/2">
-        <ul className=" flex">
+        <ul className=" md:flex">
           {categories.map((el, n) => (
-            <ul key={n} className=" w-1/2  text-center px-2 space-y-4">
+            <ul key={n} className=" md:w-1/2  text-center px-2 space-y-4">
               <Link href={el.link}>
                 <li className=" text-lg font-bold border-b  line-clamp-1">
                   {el.label}

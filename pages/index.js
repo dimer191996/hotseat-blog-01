@@ -74,13 +74,13 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
       }
       category={"none"}
     >
-      <WithScreen width="lg:w-2/3 mx-4">
+      <WithScreen width="lg:w-1/2">
         <section className="">
           <p className=" px-4 font-semibold text-md my-5 pb-5 border-b text-center">
             Your source for entertainment news, celebrities,
             <br /> TLC & 90 Day Fiance news, and ​celebrity gossip, more...!
           </p>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4  border-b pb-5">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4  border-b pb-5">
             {realityTv.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
@@ -90,7 +90,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
           <h2 className=" px-4 border-b font-bold text-2xl pb-5 pt-5 text-center">
             Reality Tv News
           </h2>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5 border-b">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5 border-b">
             <FacebookGroup />
             {realityTv.slice(2, 6)?.map((data) => (
               <div key={data._id}>
@@ -101,7 +101,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               <SubscribeNewsLatter removedesc={true} />
             </section>
           </div>{" "}
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4  py-5">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4  py-5">
             {realityTv.slice(6, 8)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
@@ -138,21 +138,21 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             <br /> True Crime Strories, Life Hack, True Stories, Top 10 List ,
             more...!
           </p>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4 gap-y-4 ">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4 gap-y-4 ">
             {truecrime.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}
           </div>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b gap-x-4 gap-y-4  py-5">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b md:gap-x-4 gap-y-4  py-5">
             {stories.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}
           </div>{" "}
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5">
             <YoutubeChannel />
             {stories.slice(2, 6)?.map((data) => (
               <div key={data._id}>
@@ -161,14 +161,14 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             ))}
             <FacebookGroup />
           </div>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b gap-x-4 gap-y-4   py-5">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b md:gap-x-4 gap-y-4   py-5">
             {stories.slice(6, 8)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
               </div>
             ))}
           </div>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  py-5">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5">
             <YoutubeChannel />
             {stories.slice(8, 12)?.map((data) => (
               <div key={data._id}>
@@ -197,7 +197,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             <br /> True Crime Strories, Life Hack, True Stories, Top 10 List ,
             more...!
           </p>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 gap-x-4  gap-y-4 ">
+          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4 ">
             {moviereviews.slice(0, 2)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
