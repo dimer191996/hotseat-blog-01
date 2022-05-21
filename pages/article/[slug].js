@@ -87,7 +87,7 @@ const Post = ({ article }) => {
                 />
               </div>
             </div>
-            <div className=" border-t border-b flex bg-white flex-row items-center justify-between  my-5 ">
+            <div className=" border-t px-4 border-b flex bg-white flex-row items-center justify-between  my-5 ">
               <div className="flex flex-col   py-2 ">
                 <div className="  leading-4  font-semibold flex-grow">
                   <h3 className=" text-lg">By {article.author}</h3>
@@ -140,8 +140,8 @@ const Post = ({ article }) => {
             data-ad-client="ca-pub-4491397756399283"
             data-ad-slot="2168142036"
           ></ins>
-          <section>
-            <div className="mt-5 mx-4">
+          <section className="px-4">
+            <div className="mt-5">
               <div
                 className="prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}

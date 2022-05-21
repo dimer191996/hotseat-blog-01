@@ -30,10 +30,12 @@ export default function SmallCard({
               imgShow && "w-4/5"
             } flex flex-col  pl-2 justify-between leading-tight`}
           >
-            <h2 className=" line-clamp-2 hover:text-red-700 text-red-800  font-bold">
+            <h2 className=" line-clamp-2 hover:text-red-700 text-red-800 text-xl  font-bold">
               {article.title}
             </h2>
-            <p className=" line-clamp-2  ">{article.description}</p>
+            <p className=" line-clamp-2 text-gray-800 text-lg md:text-md font-semibold leading-6  ">
+              {article.description}
+            </p>
           </div>
         </div>
         <div className=" flex items-center justify-center border-t my-1 pt-1 ">

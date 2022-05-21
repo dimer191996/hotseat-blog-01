@@ -74,7 +74,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
       }
       category={"none"}
     >
-      <WithScreen width="lg:w-1/2 mx-4">
+      <WithScreen width="lg:w-2/3 mx-4">
         <section className="">
           <p className=" px-4 font-semibold text-md my-5 pb-5 border-b text-center">
             Your source for entertainment news, celebrities,
@@ -235,9 +235,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             ></ins>
           </div>
         </section>
-        <div className=" px-4 flex items-center justify-center font-bold text-xl rounded-full border border-black hover:bg-gray-50 cursor-pointer my-5">
-          <span>Read More</span> <ChevronDoubleRightIcon className="h-5 mt-1" />
-        </div>
+
         <section className="">
           <h2 className="px-4 font-bold  pt-5 border-t text-xl my-5 text-center">
             Movie & Tv Series Reviews
@@ -267,10 +265,6 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               data-ad-slot="9911443569"
               data-full-width-responsive="true"
             ></ins>
-          </div>
-          <div className=" px-4 flex items-center justify-center font-bold text-xl rounded-full border border-black hover:bg-gray-50 cursor-pointer my-5">
-            <span>Read More</span>{" "}
-            <ChevronDoubleRightIcon className="h-5 mt-1" />
           </div>
         </section>
       </WithScreen>

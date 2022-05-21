@@ -26,8 +26,8 @@ export default function MoreArticles({ category }) {
     <div className=" flex  justify-center">
       <div className=" w-[90%]   my-5">
         <div className="h-6 text-center">{loading ? "loading" : ""}</div>
-        <div className=" grid lg:grid-cols-2 md:grid-cols-1">
-          {articles?.slice(0, 3).map((el, index) => (
+        <div className="">
+          {articles?.slice(0, 2).map((el, index) => (
             <SmallCard key={index} article={el} />
           ))}
           <ins
@@ -39,7 +39,9 @@ export default function MoreArticles({ category }) {
             data-ad-slot="9911443569"
             data-full-width-responsive="true"
           ></ins>
-
+          {articles?.slice(2, 5).map((el, index) => (
+            <SmallCard key={index} article={el} />
+          ))}
           <ins
             class="adsbygoogle"
             style={{ display: "block", backgroundColor: "#eeee" }}
@@ -49,7 +51,7 @@ export default function MoreArticles({ category }) {
             data-ad-slot="9911443569"
             data-full-width-responsive="true"
           ></ins>
-          {articles?.slice(3, 8).map((el, index) => (
+          {articles?.slice(5, 10).map((el, index) => (
             <SmallCard key={index} article={el} />
           ))}
         </div>
