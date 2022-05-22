@@ -9,7 +9,7 @@ export default function FloatingButton() {
         href="#comment"
         className=" py-1 rounded px-6 flex  bg-red-700 font-bold text-white"
       >
-        <CogIcon className="h-6 px-2" /> Add a comment
+        🙄 Add a comment 💬
       </a>
     </div>
   );

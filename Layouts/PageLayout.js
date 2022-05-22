@@ -62,10 +62,10 @@ export default function PageLayout({
                 <p className=" ">{pageDescription}</p>
               </div>
             </div>
-            <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
+            {/* <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
               <YoutubeChannel />
               <FacebookGroup />
-            </div>
+            </div> */}
             <h2 className=" px-4 font-bold  text-xl  pb-5  text-center">
               Latest News
             </h2>
@@ -77,7 +77,7 @@ export default function PageLayout({
           </div>
 
           <div className="  grid md:grid-cols-2 2xl:grid-cols-3">
-            <YoutubeChannel />
+            {/* <YoutubeChannel /> */}
             {articles.slice(4, 8)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
@@ -101,7 +101,7 @@ export default function PageLayout({
               data-ad-slot="9911443569"
               data-full-width-responsive="true"
             ></ins>
-            <FacebookGroup />
+            {/* <FacebookGroup /> */}
           </div>
 
           <div className="space-x-4  grid md:grid-cols-2 py-6  ">
@@ -111,13 +111,13 @@ export default function PageLayout({
           </div>
 
           <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            <FacebookGroup />
+            {/* <FacebookGroup /> */}
             {articles.slice(10, 12)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
-            <SubscribeNewsLatter removedesc={true} />
+            {/* <SubscribeNewsLatter removedesc={true} /> */}
           </div>
           <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
             {articles.slice(12, 14)?.map((data) => (
@@ -150,9 +150,9 @@ export default function PageLayout({
             ></ins>
           </div>
 
-          <div className="  flex justify-center items-center  border-t bg-white">
+          {/* <div className="  flex justify-center items-center  border-t bg-white">
             <SubscribeNewsLatter />
-          </div>
+          </div> */}
           <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
             {articles.slice(16, 20)?.map((data) => (
               <div key={data._id}>

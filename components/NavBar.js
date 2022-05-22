@@ -100,7 +100,7 @@ export default function NavBar() {
     // { name: "Food & Recipes" },
   ];
   return (
-    <nav className=" sticky top-0 md:flex justify-center space-x-4  z-50 bg-white  border-b">
+    <nav className=" fixed w-full top-0 md:flex justify-center space-x-4  z-50 bg-white  border-b">
       <div className="relative lg:h-28 h-10 md:h-24 md:w-20  rounded-lg ">
         <Image
           src="https://res.cloudinary.com/dggjlyw5e/image/upload/v1634447165/THE_HOT_SEAT_1_yubb8j.png"

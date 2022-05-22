@@ -38,9 +38,9 @@ const Post = ({ article }) => {
 
   return (
     <SeoArticle article={article}>
-      <WithScreen width=" relative  lg:w-[45%] md:w-[55%] ">
+      <WithScreen width=" relative w-full  lg:w-[45%] md:w-[55%] ">
         <div className="lg:mx-12  relative md:mx-0  sm:ml-0 ">
-          {/* <ShareArticle slug={article.slug} /> */}
+          <ShareArticle slug={article.slug} />
 
           <section className=" flex flex-col">
             <header className="flex p-3">
@@ -62,18 +62,18 @@ const Post = ({ article }) => {
             <div className=" px-3">
               <div className=" my-5 flex gap-y-2 gap-x-2">
                 <div className="bg-red-800 flex p-1 text-white rounded-lg cursor-pointer hover:bg-green-800 duration-500 ease-out px-2">
-                  Views :{" "}
+                  🐻 Views :{" "}
                   <span className=" px-2  font-bold">{article.views}</span>
                 </div>
 
                 <div className="bg-red-800 flex p-1 text-white rounded-lg cursor-pointer hover:bg-green-800 duration-500 ease-out px-2">
-                  Shares :{" "}
+                  🌻 Shares :{" "}
                   <span className=" px-2  font-bold">{article.shares}</span>
                 </div>
               </div>
             </div>
 
-            <div className=" flex justify-center p-2">
+            <div className=" md:flex justify-center md:p-2">
               <div className="relative h-[20rem] w-full ">
                 <Image
                   src={article.image}
@@ -99,6 +99,7 @@ const Post = ({ article }) => {
               </h3> */}
                 </div>
               </div>
+              <div>🙏</div>
               <div>
                 <div className=" sticky top-10">
                   <a href="https://www.buymeacoffee.com/hotseatmag">
@@ -112,7 +113,7 @@ const Post = ({ article }) => {
               </div>
             </div>
           </section>
-          {/* <section>
+          <section>
             <ins
               class="adsbygoogle"
               style={{
@@ -142,9 +143,9 @@ const Post = ({ article }) => {
               data-ad-slot="2168142036"
               data-full-width-responsive="true"
             ></ins>
-          </section> */}
+          </section>
 
-          <section className="px-4">
+          <section className="px-4 md:px-0">
             <div className="mt-5">
               <div
                 className="prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800"
@@ -183,7 +184,20 @@ const Post = ({ article }) => {
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
             </div>
-
+            <ins
+              class="adsbygoogle"
+              style={{
+                display: "block",
+                textAlign: "center",
+                backgroundColor: "#eeee",
+                overflow: "hidden",
+              }}
+              data-ad-layout="in-article"
+              data-ad-format="fluid"
+              data-ad-client="ca-pub-4491397756399283"
+              data-ad-slot="2168142036"
+              data-full-width-responsive="true"
+            ></ins>
             <hr className="my-2" />
             <FloatingButton />
             <div id="comment" className=" h-20 ">

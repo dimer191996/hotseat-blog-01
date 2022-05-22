@@ -46,7 +46,7 @@ function SubscribeNewsLatter(props) {
                 >
                   {!props.removedesc
                     ? " Click Here To JOIN"
-                    : "Subscribe to our Newslatter ."}
+                    : "🙏 Subscribe to our Newslatter 🙏 ."}
                 </button>
               </div>
             </form>

@@ -74,7 +74,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
       }
       category={"none"}
     >
-      <WithScreen width="lg:w-1/2">
+      <WithScreen width=" w-full px-2 lg:w-1/2">
         <section className="">
           <p className=" px-4 font-semibold text-md my-5 pb-5 border-b text-center">
             Your source for entertainment news, celebrities,
@@ -91,15 +91,12 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             Reality Tv News
           </h2>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5 border-b">
-            <FacebookGroup />
+            {/* <FacebookGroup /> */}
             {realityTv.slice(2, 6)?.map((data) => (
               <div key={data._id}>
                 <SmallCard article={data} />
               </div>
             ))}
-            <section className="flex justify-center">
-              <SubscribeNewsLatter removedesc={true} />
-            </section>
           </div>{" "}
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4  py-5">
             {realityTv.slice(6, 8)?.map((data) => (
@@ -125,9 +122,6 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               </div>
             ))}
           </div>{" "}
-          <section className="flex lg:mx-20 justify-center">
-            <SubscribeNewsLatter />
-          </section>
         </section>
         <section className="">
           <h2 className=" px-4 font-bold text-xl  pt-5 text-center">
@@ -169,13 +163,13 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             ))}
           </div>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5">
-            <YoutubeChannel />
+            {/* <YoutubeChannel /> */}
             {stories.slice(8, 12)?.map((data) => (
               <div key={data._id}>
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
-            <FacebookGroup />
+            {/* <FacebookGroup /> */}
             <ins
               class="adsbygoogle"
               style={{ display: "block", backgroundColor: "#eeee" }}

@@ -6,6 +6,7 @@ export default function Document() {
       <Head />
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="theme-color" content="#000000" />
       <meta
         name="facebook-domain-verification"
@@ -37,6 +38,19 @@ export default function Document() {
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4491397756399283`}
         crossOrigin="anonymous"
       ></script>
+
+      <ins
+        class="adsbygoogle"
+        style={{
+          display: "block",
+          backgroundColor: "#eee",
+          marginTop: "130px",
+        }}
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-4491397756399283"
+        data-ad-slot="2168142036"
+      ></ins>
 
       <body>
         <Main />
