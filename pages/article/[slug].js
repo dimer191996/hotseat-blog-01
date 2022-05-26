@@ -128,21 +128,6 @@ const Post = ({ article }) => {
               data-ad-slot="2168142036"
               data-full-width-responsive="true"
             ></ins>
-            <br />
-            <ins
-              class="adsbygoogle"
-              style={{
-                display: "block",
-                textAlign: "center",
-                backgroundColor: "#eeee",
-                overflow: "hidden",
-              }}
-              data-ad-layout="in-article"
-              data-ad-format="fluid"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="2168142036"
-              data-full-width-responsive="true"
-            ></ins>
           </section>
 
           <section className="px-4 md:px-0">
