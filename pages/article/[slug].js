@@ -87,7 +87,7 @@ const Post = ({ article }) => {
             <div className=" border-t px-4 border-b flex bg-white flex-row items-center justify-between  my-5 ">
               <div className="flex flex-col   py-2 ">
                 <div className="  leading-4  font-semibold flex-grow">
-                  <h3 className=" text-lg">By {article.author}</h3>
+                  <h3 className=" md:text-lg text-md">By {article.author}</h3>
                 </div>
                 <div className="  leading-4  flex-grow">
                   <h3 className="">{cleanDate(article.createdAt)}</h3>
@@ -158,27 +158,43 @@ const Post = ({ article }) => {
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
-
-              {article.sanitizedHTML1 && (
-                <div>
-                  <hr className="my-2" />
-                  <YoutubeChannel />
-                  <hr className="mt-2" />
-                </div>
-              )}
-
+              <ins
+                class="adsbygoogle"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  backgroundColor: "#eeee",
+                  overflow: "hidden",
+                }}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-4491397756399283"
+                data-ad-slot="2168142036"
+                data-full-width-responsive="true"
+              ></ins>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
               ></div>
-
+              <FacebookGroup />
               <div
                 className="prose prose-xl mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML3 }}
               ></div>
-
-              <SubscribeNewsLatter removedesc={true} />
-
+              <ins
+                class="adsbygoogle"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  backgroundColor: "#eeee",
+                  overflow: "hidden",
+                }}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-4491397756399283"
+                data-ad-slot="2168142036"
+                data-full-width-responsive="true"
+              ></ins>{" "}
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
