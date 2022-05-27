@@ -140,15 +140,15 @@ const Post = ({ article }) => {
                 className="prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
-              <iframe
-                sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
-                style={{ width: "120px", height: "240px" }}
-                marginwidth="0"
-                marginheight="0"
-                scrolling="no"
-                frameborder="0"
-                src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=db191996-20&language=en_US&marketplace=amazon&region=US&placement=B07SSLD42M&asins=B07SSLD42M&linkId=9f9bdc67658e9bc56d15917bbd76ef1e&show_border=true&link_opens_in_new_window=true"
-              ></iframe>
+              <ins
+                class="adsbygoogle"
+                style={{ display: "block", backgroundColor: "#eeee" }}
+                data-ad-format="fluid"
+                data-ad-layout-key="-gq+t-1c-fj+xa"
+                data-ad-client="ca-pub-4491397756399283"
+                data-ad-slot="9911443569"
+                data-full-width-responsive="true"
+              ></ins>
               <div
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}

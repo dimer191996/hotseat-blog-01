@@ -32,7 +32,7 @@ export default function contact() {
             content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
           />
         </Head>
-        <div className=" border-b">
+        <div className=" border-b ">
           <div className=" md:flex justify-center my-8">
             <div id="respond" className=" p-5" style={{ display: "block" }}>
               <span className=" items-center font-bold my-5 justify-center flex text-3xl">
