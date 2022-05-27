@@ -132,13 +132,23 @@ const Post = ({ article }) => {
 
           <section className="px-4 md:px-0">
             <div className="mt-5">
+              {" "}
+              {article.sanitizedHTML2 && (
+                <YoutubeChannel title={article.title} video={article.video} />
+              )}
               <div
                 className="prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
-              {article.sanitizedHTML2 && (
-                <YoutubeChannel title={article.title} video={article.video} />
-              )}
+              <iframe
+                sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+                style={{ width: "120px", height: "240px" }}
+                marginwidth="0"
+                marginheight="0"
+                scrolling="no"
+                frameborder="0"
+                src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=db191996-20&language=en_US&marketplace=amazon&region=US&placement=B07SSLD42M&asins=B07SSLD42M&linkId=9f9bdc67658e9bc56d15917bbd76ef1e&show_border=true&link_opens_in_new_window=true"
+              ></iframe>
               <div
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}

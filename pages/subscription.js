@@ -14,30 +14,30 @@ export default function contact() {
   }, []);
   return (
     <div className=" bg-gray-50">
+      <Head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>Newsletter Subscription | HotSeatMag</title>
+
+        <meta
+          property="og:title"
+          content="Newsletter Subscription | HotSeatMag"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.hotseatmag.com/contact-us"
+        />
+
+        <meta property="og:locale" content="en_US" />
+        <meta
+          name="description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+      </Head>
       <WithScreen width="">
-        <Head>
-          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-          <title>Newsletter Subscription | HotSeatMag</title>
-
-          <meta
-            property="og:title"
-            content="Newsletter Subscription | HotSeatMag"
-          />
-
-          <meta
-            property="og:url"
-            content="https://www.hotseatmag.com/contact-us"
-          />
-
-          <meta property="og:locale" content="en_US" />
-          <meta
-            name="description"
-            content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
-          />
-        </Head>
         <div className=" border-b mb-10">
-          <div className=" flex justify-center my-8">
+          <div className=" md:flex justify-center my-8">
             <div className="">
               <div id="respond" className=" p-5" style={{ display: "block" }}>
                 <span className=" items-center font-bold my-5 justify-center flex text-xl lg:text-3xl">
