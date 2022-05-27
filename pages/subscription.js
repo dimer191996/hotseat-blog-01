@@ -1,13 +1,10 @@
 import { CheckCircleIcon, MailIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";
-import WithScreen from "../Layouts/WithScreen";
 import Head from "next/head";
-import { OKIcon } from "react-share";
-import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function contact() {
   const [success, setSuccess] = useState(false);
-  const router = useRouter();
   useEffect(() => {
     if (window.location.search.includes("success=true")) {
       setSuccess(true);
@@ -75,7 +72,7 @@ export default function contact() {
                       name="author"
                       type="text"
                       className=" p-3 my-2 border  rounded-lg focus:outline-none"
-                      placeholder="Name *"
+                      placeholder="Name "
                       size="30"
                       aria-required="true"
                     />
@@ -110,12 +107,12 @@ export default function contact() {
                 </div>
               </form>
               <div className="py-3 items-center flex justify-center">
-                <button
-                  onClick={() => router.back()}
+                <Link
+                  href="/"
                   className=" bg-gray-500 font-bold rounded px-4 text-white"
                 >
                   Close X
-                </button>
+                </Link>
               </div>
             </div>
           </div>
