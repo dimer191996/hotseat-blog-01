@@ -107,16 +107,16 @@ export default function contact() {
                 </span> */}
                     </button>
                   </div>
-                  <div className="py-3 items-center flex justify-center">
-                    <button
-                      onClick={() => router.back()}
-                      className=" bg-gray-500 font-bold rounded px-4 text-white"
-                    >
-                      Close X
-                    </button>
-                  </div>
                 </div>
               </form>
+              <div className="py-3 items-center flex justify-center">
+                <button
+                  onClick={() => router.back()}
+                  className=" bg-gray-500 font-bold rounded px-4 text-white"
+                >
+                  Close X
+                </button>
+              </div>
             </div>
           </div>
         </div>
