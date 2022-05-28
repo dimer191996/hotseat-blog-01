@@ -29,7 +29,7 @@ export default function FloatingButton({ hidebutton, showbutton, hideHeader }) {
         <div
           className={` lg:w-1/3 md:w-1/2 w-full ${
             hideHeader && "my-15 "
-          }  relative shadow-lg  space-y-5 cursor-pointer pt-6 pb-4  rounded-t md:px-6 px-4 flex flex-col text-center text-lg   font-bold text-black`}
+          }  relative  space-y-5 cursor-pointer pt-6 pb-4  rounded-t md:px-6 px-4 flex flex-col text-center text-lg   font-bold text-black`}
         >
           {hideHeader && (
             <div className=" text-4xl mt-4 font-black">Subscribe</div>
