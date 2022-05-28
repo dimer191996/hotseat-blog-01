@@ -81,7 +81,7 @@ const Post = ({ article }) => {
                 />
               </div>
             </div>
-            <div className=" border-t px-4 border-b flex bg-white flex-row items-center justify-between  my-5 ">
+            <div className=" border-t px-4 flex bg-white flex-row items-center justify-between  my-5 ">
               <div className="flex flex-col   py-2 ">
                 <div className="  leading-4  font-semibold flex-grow">
                   <h3 className=" md:text-lg text-md">By {article.author}</h3>
