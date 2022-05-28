@@ -111,8 +111,9 @@ const Post = ({ article }) => {
             </div>
           </section>
           <section>
+            <div className="separator">Ads</div>
             <ins
-              class="adsbygoogle"
+              className="adsbygoogle"
               style={{
                 display: "block",
                 textAlign: "center",
@@ -125,6 +126,7 @@ const Post = ({ article }) => {
               data-ad-slot="2168142036"
               data-full-width-responsive="true"
             ></ins>
+            <div className="separator">End</div>
           </section>
 
           <section className="px-4 md:px-0">
@@ -134,11 +136,12 @@ const Post = ({ article }) => {
                 <YoutubeChannel title={article.title} video={article.video} />
               )}
               <div
-                className="prose has-dropcap prose-xl   lg:prose-xl   prose-a:text-red-800"
+                className="prose has-dropcap prose-xl mt-6  lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
+              <div className="separator">Ads</div>
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{ display: "block", backgroundColor: "#eeee" }}
                 data-ad-format="fluid"
                 data-ad-layout-key="-gq+t-1c-fj+xa"
@@ -146,12 +149,14 @@ const Post = ({ article }) => {
                 data-ad-slot="9911443569"
                 data-full-width-responsive="true"
               ></ins>
+              <div className="separator">End</div>
               <div
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
+              <div className="separator">Ads</div>
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{
                   display: "block",
                   textAlign: "center",
@@ -164,6 +169,7 @@ const Post = ({ article }) => {
                 data-ad-slot="2168142036"
                 data-full-width-responsive="true"
               ></ins>
+              <div className="separator">End</div>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
@@ -173,8 +179,9 @@ const Post = ({ article }) => {
                 className="prose prose-xl mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML3 }}
               ></div>
+              <div className="separator">Ads</div>
               <ins
-                class="adsbygoogle"
+                className="adsbygoogle"
                 style={{
                   display: "block",
                   textAlign: "center",
@@ -186,14 +193,16 @@ const Post = ({ article }) => {
                 data-ad-client="ca-pub-4491397756399283"
                 data-ad-slot="2168142036"
                 data-full-width-responsive="true"
-              ></ins>{" "}
+              ></ins>
+              <div className="separator">End</div>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
             </div>
+            <div className="separator">Ads</div>
             <ins
-              class="adsbygoogle"
+              className="adsbygoogle"
               style={{
                 display: "block",
                 textAlign: "center",
@@ -206,7 +215,7 @@ const Post = ({ article }) => {
               data-ad-slot="2168142036"
               data-full-width-responsive="true"
             ></ins>
-            <hr className="my-2" />
+            <div className="separator">Ads</div>
 
             <div id="comment" className=" h-20 ">
               <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">

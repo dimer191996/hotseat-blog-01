@@ -38,13 +38,13 @@ export default function Document() {
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4491397756399283`}
         crossOrigin="anonymous"
       ></script>
+      <div className=" sm:mt-20 mt-24 md:mt-32"></div>
 
       <ins
         class="adsbygoogle"
         style={{
           display: "block",
-          backgroundColor: "#eee",
-          marginTop: "130px",
+          backgroundColor: "#eee9",
         }}
         data-ad-layout="in-article"
         data-ad-format="fluid"

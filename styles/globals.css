@@ -64,3 +64,26 @@ h6 {
   white-space: nowrap;
   width: 1px;
 }
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: small;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #eeee;
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
