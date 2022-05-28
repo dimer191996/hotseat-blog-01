@@ -11,8 +11,8 @@ export default function Custom500() {
         The website is currently under mentenance
       </div>
       <Link href={"/subscription"}>
-        <div className=" font-bold to-blue-600">
-          Click here | Take This Step Unlock
+        <div className=" cursor-pointer font-bold to-blue-600">
+          Click here | Take This Step To Unlock
         </div>
       </Link>
     </div>
