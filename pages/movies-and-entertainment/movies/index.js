@@ -22,7 +22,7 @@ export default function movies({ M }) {
 export async function getServerSideProps() {
   const M = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/movie-review`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/movie-review`,
       {
         timeout: 10000,
       }

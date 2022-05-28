@@ -10,7 +10,7 @@ import FacebookGroup from "../components/FacebookGroup";
 
 export async function getServerSideProps() {
   const realityTv = await axios
-    .get(`${"https://blog-app-hot.herokuapp.com/api/"}articles/home/tv`, {
+    .get(`${"https://hot-seat-app.herokuapp.com/api/"}articles/home/tv`, {
       timeout: 10000,
     })
     .then((res) => res.data.articles)
@@ -20,7 +20,7 @@ export async function getServerSideProps() {
 
   const stories = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/short`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/short`,
       {
         timeout: 10000,
       }
@@ -31,7 +31,7 @@ export async function getServerSideProps() {
     });
   const truecrime = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/truecrime`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/truecrime`,
       {
         timeout: 10000,
       }
@@ -42,7 +42,7 @@ export async function getServerSideProps() {
     });
   const moviereviews = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/movie-review`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/movie-review`,
       {
         timeout: 10000,
       }

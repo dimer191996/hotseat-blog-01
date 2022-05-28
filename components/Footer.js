@@ -70,7 +70,7 @@ export default function Footer() {
             </Link>
           </li>
         </div>
-        <div className="flex  items-center justify-center mt-4">
+        <div className="flex  items-center justify-center mt-4 mb-32">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
             <a href="https://www.hotseatmag.com/" className="hover:underline">

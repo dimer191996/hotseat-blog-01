@@ -2,13 +2,11 @@ import axios from "axios";
 import Image from "next/image";
 import moment from "moment";
 import FacebookGroup from "../../components/FacebookGroup";
-import FloatingButton from "../../components/FloatingButton";
 import MoreArticles from "../../components/MoreArticles";
 import SeoArticle from "../../components/SeoArticles";
 import ShareArticle from "../../components/ShareArticle";
 import YoutubeChannel from "../../components/YoutubeChannel";
 import WithScreen from "../../Layouts/WithScreen";
-import { useState } from "react";
 
 export async function getServerSideProps({ params }) {
   const article = await axios
@@ -34,8 +32,6 @@ const Post = ({ article }) => {
   const cleanDate = (date) => {
     return moment(date).fromNow();
   };
-
-  const [visible, setVisible] = useState(true);
 
   return (
     <SeoArticle article={article}>
@@ -211,7 +207,7 @@ const Post = ({ article }) => {
               data-full-width-responsive="true"
             ></ins>
             <hr className="my-2" />
-            {visible && <FloatingButton hidebutton={() => setVisible(false)} />}
+
             <div id="comment" className=" h-20 ">
               <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
                 <p> Comming Soon, We're Working the comment section</p>

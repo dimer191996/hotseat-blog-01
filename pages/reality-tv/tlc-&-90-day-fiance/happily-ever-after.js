@@ -21,7 +21,7 @@ export default function happilyEverAfter({ realityTv }) {
 export async function getServerSideProps() {
   const realityTv = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/happyEverAfter`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/happyEverAfter`,
       {
         timeout: 10000,
       }

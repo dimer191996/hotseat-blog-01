@@ -21,7 +21,7 @@ export default function spoilers({ realityTv }) {
 export async function getServerSideProps() {
   const realityTv = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/spoilers`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/spoilers`,
       {
         timeout: 10000,
       }

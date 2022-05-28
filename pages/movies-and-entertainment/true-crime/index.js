@@ -22,7 +22,7 @@ export default function trueCrime({ TC }) {
 export async function getServerSideProps() {
   const TC = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/truecrime`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/truecrime`,
       {
         timeout: 10000,
       }

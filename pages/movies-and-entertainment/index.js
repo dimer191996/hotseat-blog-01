@@ -36,7 +36,7 @@ export default function HomeMovies({ ME }) {
 export async function getStaticProps() {
   const ME = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/home/movies-entertainment`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/home/movies-entertainment`,
       {
         timeout: 10000,
       }

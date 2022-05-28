@@ -22,7 +22,7 @@ export default function stories({ stories }) {
 export async function getServerSideProps() {
   const stories = await axios
     .get(
-      `${"https://blog-app-hot.herokuapp.com/api/"}articles/category/short`,
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/short`,
       {
         timeout: 10000,
       }
