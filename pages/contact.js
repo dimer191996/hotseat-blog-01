@@ -13,7 +13,6 @@ export default function contact() {
   }, []);
   return (
     <div className=" bg-gray-50">
-      <WithScreen width="">
         <Head>
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -32,6 +31,7 @@ export default function contact() {
             content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
           />
         </Head>
+      <WithScreen width="">
         <div className=" border-b ">
           <div className=" md:flex justify-center my-8">
             <div id="respond" className=" p-5" style={{ display: "block" }}>

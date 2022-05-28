@@ -12,7 +12,7 @@ import { useState } from "react";
 
 export async function getServerSideProps({ params }) {
   const article = await axios
-    .get(`${"https://blog-app-hot.herokuapp.com/api/"}article/` + params.slug, {
+    .get(`${"https://hot-seat-app.herokuapp.com/api/"}article/` + params.slug, {
       timeout: 10000,
     })
     .then((res) => res.data.article)

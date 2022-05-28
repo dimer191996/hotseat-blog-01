@@ -28,7 +28,7 @@ export default function Custom500() {
         </div>
         <Link href={"/subscription"}>
           <div className=" cursor-pointer font-bold text-blue-600">
-            Click here | Take This Step To Unlock
+            Click here To Be notify when we're ready .
           </div>
         </Link>
       </div>
