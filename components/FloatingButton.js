@@ -1,4 +1,9 @@
-import { ArrowCircleDownIcon, ArrowCircleUpIcon } from "@heroicons/react/solid";
+import {
+  ArrowCircleDownIcon,
+  ArrowCircleUpIcon,
+  MailIcon,
+  MailOpenIcon,
+} from "@heroicons/react/solid";
 import Link from "next/link";
 import React from "react";
 
@@ -32,7 +37,9 @@ export default function FloatingButton({ hidebutton, showbutton, hideHeader }) {
           }  relative  space-y-5 cursor-pointer pt-6 pb-4  rounded-t md:px-6 px-4 flex flex-col text-center text-lg   font-bold text-black`}
         >
           {hideHeader && (
-            <div className=" text-4xl mt-4 font-black">Subscribe</div>
+            <div className="flex justify-center text-4xl mt-4 font-black">
+              <MailIcon className=" text-green-400 h-12" />
+            </div>
           )}
           {hideHeader && (
             <p className="   text-center ">

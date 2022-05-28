@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FloatingButton from "../components/FloatingButton";
 import Footer from "../components/Footer";
 
@@ -6,6 +6,11 @@ import NavBar from "../components/NavBar";
 
 export default function Default({ children }) {
   const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+      setVisible(false);
+    }
+  }, []);
   return (
     <>
       <div className="">
