@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Custom500() {
   return (
-    <div className=" flex justify-center text-center">
+    <div className=" flex flex-col text-center">
       <h1 className=" lg:text-3xl text-2xl font-black">
         We apologize for the inconvinience{" "}
       </h1>
