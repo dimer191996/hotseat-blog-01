@@ -153,7 +153,7 @@ const Post = ({ article }) => {
                 className="prose has-dropcap prose-xl mt-6  lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
-              <div className="separator">Ads</div>
+              <div className="separator">Reads</div>
               <ins
                 className="adsbygoogle"
                 style={{ display: "block", backgroundColor: "#eeee" }}
@@ -163,24 +163,19 @@ const Post = ({ article }) => {
                 data-ad-slot="9911443569"
                 data-full-width-responsive="true"
               ></ins>
-              <div className="separator">End</div>
+              <div className="separator"></div>
               <div
                 className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
-              <div className="separator">Ads</div>
+              <div className="separator">Reads</div>
               <ins
                 className="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  backgroundColor: "#eeee",
-                  overflow: "hidden",
-                }}
-                data-ad-layout="in-article"
+                style={{ display: "block", backgroundColor: "#eeee" }}
                 data-ad-format="fluid"
+                data-ad-layout-key="-gq+t-1c-fj+xa"
                 data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
+                data-ad-slot="9911443569"
                 data-full-width-responsive="true"
               ></ins>
               <div className="separator"></div>
@@ -193,19 +188,14 @@ const Post = ({ article }) => {
                 className="prose prose-xl mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML3 }}
               ></div>
-              <div className="separator">Ads</div>
+              <div className="separator">Reads</div>
               <ins
                 className="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  backgroundColor: "#eeee",
-                  overflow: "hidden",
-                }}
-                data-ad-layout="in-article"
+                style={{ display: "block", backgroundColor: "#eeee" }}
                 data-ad-format="fluid"
+                data-ad-layout-key="-gq+t-1c-fj+xa"
                 data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
+                data-ad-slot="9911443569"
                 data-full-width-responsive="true"
               ></ins>
               <div className="separator"></div>
