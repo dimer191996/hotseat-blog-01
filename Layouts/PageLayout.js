@@ -51,7 +51,20 @@ export default function PageLayout({
             ))}
           </div>
 
-          <div id="ezoic-pub-ad-placeholder-111"> </div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              overflow: "hidden",
+              backgroundColor: "#eeee",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+            data-full-width-responsive="true"
+          ></ins>
 
           <hearder className=" border-t  flex border-b flex-col items-center">
             <div className=" my-5 border-b bg-gray-300 py-2">
@@ -70,6 +83,20 @@ export default function PageLayout({
               Latest News
             </h2>
           </hearder>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              overflow: "hidden",
+              backgroundColor: "#eeee",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+            data-full-width-responsive="true"
+          ></ins>
           <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
             {articles.slice(2, 4)?.map((data) => (
               <ArticleCard key={data._id} article={data} />
@@ -119,6 +146,20 @@ export default function PageLayout({
             ))}
             {/* <SubscribeNewsLatter removedesc={true} /> */}
           </div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              overflow: "hidden",
+              backgroundColor: "#eeee",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+            data-full-width-responsive="true"
+          ></ins>
           <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
             {articles.slice(12, 14)?.map((data) => (
               <ArticleCard key={data._id} article={data} />

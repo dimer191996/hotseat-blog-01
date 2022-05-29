@@ -183,7 +183,7 @@ const Post = ({ article }) => {
                 data-ad-slot="2168142036"
                 data-full-width-responsive="true"
               ></ins>
-              <div className="separator">End</div>
+              <div className="separator"></div>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
@@ -208,7 +208,7 @@ const Post = ({ article }) => {
                 data-ad-slot="2168142036"
                 data-full-width-responsive="true"
               ></ins>
-              <div className="separator">End</div>
+              <div className="separator"></div>
               <div
                 className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}

@@ -97,7 +97,21 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
                 <SmallCard article={data} />
               </div>
             ))}
-          </div>{" "}
+          </div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              overflow: "hidden",
+              backgroundColor: "#eeee",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+            data-full-width-responsive="true"
+          ></ins>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4  py-5">
             {realityTv.slice(6, 8)?.map((data) => (
               <div key={data._id}>
@@ -110,7 +124,7 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
                   <SmallCard imgShow={false} article={data} />
                 </div>
               ))}
-            </section>{" "}
+            </section>
             {realityTv.slice(11, 14)?.map((data) => (
               <div key={data._id}>
                 <ArticleCard article={data} />
@@ -121,8 +135,22 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
                 <SmallCard imgShow={false} article={data} />
               </div>
             ))}
-          </div>{" "}
+          </div>
         </section>
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: "block",
+            textAlign: "center",
+            overflow: "hidden",
+            backgroundColor: "#eeee",
+          }}
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-4491397756399283"
+          data-ad-slot="2168142036"
+          data-full-width-responsive="true"
+        ></ins>
         <section className="">
           <h2 className=" px-4 font-bold text-xl  pt-5 text-center">
             True Crime & Entertainment Stories
@@ -139,6 +167,20 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
               </div>
             ))}
           </div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              overflow: "hidden",
+              backgroundColor: "#eeee",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+            data-full-width-responsive="true"
+          ></ins>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b md:gap-x-4 gap-y-4  py-5">
             {stories.slice(0, 2)?.map((data) => (
               <div key={data._id}>
@@ -155,6 +197,20 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             ))}
             <FacebookGroup />
           </div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              textAlign: "center",
+              overflow: "hidden",
+              backgroundColor: "#eeee",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+            data-full-width-responsive="true"
+          ></ins>
           <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b md:gap-x-4 gap-y-4   py-5">
             {stories.slice(6, 8)?.map((data) => (
               <div key={data._id}>
@@ -181,7 +237,20 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             ></ins>
           </div>
         </section>
-
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: "block",
+            textAlign: "center",
+            overflow: "hidden",
+            backgroundColor: "#eeee",
+          }}
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-4491397756399283"
+          data-ad-slot="2168142036"
+          data-full-width-responsive="true"
+        ></ins>
         <section className="">
           <h2 className="px-4 font-bold  pt-5 border-t text-xl my-5 text-center">
             Movie & Tv Series Reviews
@@ -213,6 +282,20 @@ export default function Home({ realityTv, stories, truecrime, moviereviews }) {
             ></ins>
           </div>
         </section>
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: "block",
+            textAlign: "center",
+            overflow: "hidden",
+            backgroundColor: "#eeee",
+          }}
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-4491397756399283"
+          data-ad-slot="2168142036"
+          data-full-width-responsive="true"
+        ></ins>
       </WithScreen>
     </SeoPage>
   );
