@@ -157,9 +157,22 @@ const Post = ({ article }) => {
                 className="prose prose-xl py-2   lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
-              {article.sanitizedHTML1 && (
-                <YoutubeChannel title={article.title} video={article.video1} />
-              )}
+              <div className="separator"></div>
+              <ins
+                className="adsbygoogle"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  overflow: "hidden",
+                  backgroundColor: "#eeee",
+                }}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-4491397756399283"
+                data-ad-slot="2168142036"
+                data-full-width-responsive="true"
+              ></ins>
+              <div className="separator"></div>
               <div
                 className="prose prose-xl py-2  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
@@ -168,14 +181,19 @@ const Post = ({ article }) => {
                 className="prose prose-xl py-2 mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML3 }}
               ></div>
-              <div className="separator">Reads</div>
+              <div className="separator"></div>
               <ins
                 className="adsbygoogle"
-                style={{ display: "block", backgroundColor: "#eeee" }}
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  overflow: "hidden",
+                  backgroundColor: "#eeee",
+                }}
+                data-ad-layout="in-article"
                 data-ad-format="fluid"
-                data-ad-layout-key="-gq+t-1c-fj+xa"
                 data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="9911443569"
+                data-ad-slot="2168142036"
                 data-full-width-responsive="true"
               ></ins>
               <div className="separator"></div>
@@ -190,8 +208,8 @@ const Post = ({ article }) => {
               style={{
                 display: "block",
                 textAlign: "center",
-                backgroundColor: "#eeee",
                 overflow: "hidden",
+                backgroundColor: "#eeee",
               }}
               data-ad-layout="in-article"
               data-ad-format="fluid"
