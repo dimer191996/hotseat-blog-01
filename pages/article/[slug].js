@@ -146,46 +146,26 @@ const Post = ({ article }) => {
           <section className="px-4 md:px-0">
             <div className="mt-5">
               {" "}
-              {article.sanitizedHTML2 && (
+              {article.sanitizedHTML && (
                 <YoutubeChannel title={article.title} video={article.video} />
               )}
               <div
-                className="prose has-dropcap prose-xl mt-6  lg:prose-xl   prose-a:text-red-800"
+                className="prose py-2  has-dropcap prose-xl mt-6  lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
-              <div className="separator">Reads</div>
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block", backgroundColor: "#eeee" }}
-                data-ad-format="fluid"
-                data-ad-layout-key="-gq+t-1c-fj+xa"
-                data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="9911443569"
-                data-full-width-responsive="true"
-              ></ins>
-              <div className="separator"></div>
               <div
-                className="prose prose-xl  lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
+                className="prose prose-xl py-2   lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
-              <div className="separator">Reads</div>
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block", backgroundColor: "#eeee" }}
-                data-ad-format="fluid"
-                data-ad-layout-key="-gq+t-1c-fj+xa"
-                data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="9911443569"
-                data-full-width-responsive="true"
-              ></ins>
-              <div className="separator"></div>
+              {article.sanitizedHTML1 && (
+                <YoutubeChannel title={article.title} video={article.video1} />
+              )}
               <div
-                className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
+                className="prose prose-xl py-2  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
               ></div>
-              <FacebookGroup />
               <div
-                className="prose prose-xl mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
+                className="prose prose-xl py-2 mt-5  lg:prose-xl   first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML3 }}
               ></div>
               <div className="separator">Reads</div>
@@ -200,7 +180,7 @@ const Post = ({ article }) => {
               ></ins>
               <div className="separator"></div>
               <div
-                className="prose prose-xl  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
+                className="prose prose-xl py-2  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
             </div>
@@ -221,6 +201,11 @@ const Post = ({ article }) => {
             ></ins>
             <div className="separator">Ads</div>
 
+            <div id="comment" className=" h-20 ">
+              <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
+                <p> Comming Soon, We're Working the comment section</p>
+              </div>
+            </div>
             <section>
               <div className=" space-y-2">
                 <p className=" text-3xl font-bold">
