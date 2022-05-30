@@ -7,7 +7,6 @@ import SeoArticle from "../../components/SeoArticles";
 import ShareArticle from "../../components/ShareArticle";
 import YoutubeChannel from "../../components/YoutubeChannel";
 import WithScreen from "../../Layouts/WithScreen";
-import Comments from "../../components/Comments";
 
 export async function getServerSideProps({ params }) {
   const article = await axios
@@ -221,8 +220,6 @@ const Post = ({ article }) => {
               data-full-width-responsive="true"
             ></ins>
             <div className="separator">Ads</div>
-
-            <Comments post={article} />
 
             <section>
               <div className=" space-y-2">
