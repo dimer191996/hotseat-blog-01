@@ -7,6 +7,7 @@ import SeoArticle from "../../components/SeoArticles";
 import ShareArticle from "../../components/ShareArticle";
 import YoutubeChannel from "../../components/YoutubeChannel";
 import WithScreen from "../../Layouts/WithScreen";
+import Comments from "../../components/Comments";
 
 export async function getServerSideProps({ params }) {
   const article = await axios
@@ -221,11 +222,8 @@ const Post = ({ article }) => {
             ></ins>
             <div className="separator">Ads</div>
 
-            <div id="comment" className=" h-20 ">
-              <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
-                <p> Comming Soon, We're Working the comment section</p>
-              </div>
-            </div>
+            <Comments post={article} />
+
             <section>
               <div className=" space-y-2">
                 <p className=" text-3xl font-bold">
