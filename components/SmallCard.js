@@ -2,6 +2,7 @@ import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ArticleTags from "./ArticleTags";
 
 export default function SmallCard({
   article,
@@ -28,14 +29,18 @@ export default function SmallCard({
           <div
             className={` ${
               imgShow && "w-4/5"
-            } flex flex-col  pl-2 justify-between leading-tight`}
+            } flex flex-col  pl-2 leading-tight`}
           >
-            <h2 className=" line-clamp-2 hover:text-red-700 text-red-800 text-xl  font-bold">
+            {" "}
+            <h2 className=" line-clamp-2 hover:text-red-700 text-red-800 md:text-xl  font-bold">
               {article.title}
-            </h2>
-            <p className=" line-clamp-2 text-gray-800 text-lg md:text-md font-semibold leading-6  ">
+            </h2>{" "}
+            <p className=" line-clamp-2 text-gray-800 lg:text-lg md:text-md font-semibold leading-6  ">
               {article.description}
-            </p>
+            </p>{" "}
+            <div className=" flex items-center line-clamp-1  ">
+              <ArticleTags t={article.tags} />
+            </div>
           </div>
         </div>
         <div className=" flex items-center justify-center border-t my-1 pt-1 ">

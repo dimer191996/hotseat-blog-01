@@ -1,12 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import ArticleCard from "../components/ArticleCard";
-import FacebookGroup from "../components/FacebookGroup";
+import ArticleCard2 from "../components/ArticleCard2";
+import ArticlesSection from "../components/ArticlesSection";
 import SeoPage from "../components/SeoPage";
-import SmallCard from "../components/SmallCard";
-import SocialMedia from "../components/SocialMedia";
-import SubscribeNewsLatter from "../components/SubscribeNewsLatter";
-import YoutubeChannel from "../components/YoutubeChannel";
 
 export default function PageLayout({
   articles,
@@ -22,35 +19,24 @@ export default function PageLayout({
       hearder={hearder}
       category={category}
     >
+      <div className=" md:flex border-b justify-center py-5 ">
+        <div className=" w-full lg:w-2/3 mx-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+            {articles?.slice(0, 4).map((data) => (
+              <ArticleCard2 h={96} article={data} />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="flex justify-center ">
         <div className=" lg:w-1/2 md:w-4/5 px-4 border-b">
-          <section className=" z-auto  flex flex-col items-center">
-            <div className="   ">
-              <div className="   my-2 py-2">
-                <ul className=" bg-white flex justify-center items-center">
-                  {topics.map((el, index) => (
-                    <li
-                      key={index}
-                      className=" hover:bg-gray-200 border-t border-b cursor-pointer py-2 ease-out duration-500"
-                    >
-                      <Link href={el.link}>
-                        <p className=" line-clamp-1 px-4 font-semibold text-md  ">
-                          {el.label}
-                        </p>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
-
           <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
-            {articles.slice(0, 2)?.map((data) => (
+            {articles.slice(4, 6)?.map((data) => (
               <ArticleCard key={data._id} article={data} />
             ))}
           </div>
 
+          <div className=" separator">Ads</div>
           <ins
             className="adsbygoogle"
             style={{
@@ -66,8 +52,8 @@ export default function PageLayout({
             data-full-width-responsive="true"
           ></ins>
 
-          <hearder className=" border-t  flex border-b flex-col items-center">
-            <div className=" my-5 border-b bg-gray-300 py-2">
+          <hearder className=" border-t  flex    flex-col items-center">
+            <div className=" my-5  py-2">
               <h2 className=" px-4 font-bold text-2xl  text-center">
                 {hearder}
               </h2>
@@ -75,181 +61,30 @@ export default function PageLayout({
                 <p className=" ">{pageDescription}</p>
               </div>
             </div>
-            {/* <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
-              <YoutubeChannel />
-              <FacebookGroup />
-            </div> */}
-            <h2 className=" px-4 font-bold  text-xl  pb-5  text-center">
-              Latest News
-            </h2>
           </hearder>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              overflow: "hidden",
-              backgroundColor: "#eeee",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-            data-full-width-responsive="true"
-          ></ins>
-          <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
-            {articles.slice(2, 4)?.map((data) => (
-              <ArticleCard key={data._id} article={data} />
-            ))}
-          </div>
 
-          <div className="  grid md:grid-cols-2 2xl:grid-cols-3">
-            {/* <YoutubeChannel /> */}
-            {articles.slice(4, 8)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-gq+t-1c-fj+xa"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="9911443569"
-              data-full-width-responsive="true"
-            ></ins>
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-gq+t-1c-fj+xa"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="9911443569"
-              data-full-width-responsive="true"
-            ></ins>
-            {/* <FacebookGroup /> */}
+          <div className="my-5">
+            <div className=" separator text-left">
+              <h1 className=" text-4xl font-bold">Latest</h1>
+            </div>
           </div>
+          <ArticlesSection articles={articles?.slice(6, 10)} />
 
-          <div className="space-x-4  grid md:grid-cols-2 py-6  ">
-            {articles.slice(8, 10)?.map((data) => (
-              <ArticleCard key={data._id} article={data} />
-            ))}
-          </div>
+          {articles.length > 15 && (
+            <ArticlesSection articles={articles?.slice(10, 16)} />
+          )}
 
-          <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            {/* <FacebookGroup /> */}
-            {articles.slice(10, 12)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-            {/* <SubscribeNewsLatter removedesc={true} /> */}
-          </div>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              overflow: "hidden",
-              backgroundColor: "#eeee",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-            data-full-width-responsive="true"
-          ></ins>
-          <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
-            {articles.slice(12, 14)?.map((data) => (
-              <ArticleCard key={data._id} article={data} />
-            ))}
-          </div>
-          <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            {articles.slice(14, 16)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-gq+t-1c-fj+xa"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="9911443569"
-              data-full-width-responsive="true"
-            ></ins>
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-gq+t-1c-fj+xa"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="9911443569"
-              data-full-width-responsive="true"
-            ></ins>
-          </div>
+          {articles.length > 20 && (
+            <ArticlesSection articles={articles?.slice(16, 22)} />
+          )}
 
-          {/* <div className="  flex justify-center items-center  border-t bg-white">
-            <SubscribeNewsLatter />
-          </div> */}
-          <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            {articles.slice(16, 20)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-          </div>
-          <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 gap-4">
-            {articles.slice(20, 22)?.map((data) => (
-              <ArticleCard key={data._id} article={data} />
-            ))}
-          </div>
+          {articles.length > 26 && (
+            <ArticlesSection articles={articles?.slice(21, 27)} />
+          )}
 
-          <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            {articles.slice(22, 24)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-          </div>
-          <div className="  grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0 ">
-            {articles.slice(24, 26)?.map((data) => (
-              <ArticleCard key={data._id} article={data} />
-            ))}
-          </div>
-          <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            {articles.slice(24, 26)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-          </div>
-          <ins
-            class="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              backgroundColor: "#eeee40",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
-          <div className=" grid md:grid-cols-2 py-6 space-x-4  sm:space-y-2 md:space-x-0  ">
-            {articles.slice(26, 28)?.map((data) => (
-              <ArticleCard key={data._id} article={data} />
-            ))}
-          </div>
-          <div className="  grid md:grid-cols-2  2xl:grid-cols-3">
-            {articles.slice(28, 3)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-          </div>
+          {articles.length > 39 && (
+            <ArticlesSection articles={articles?.slice(27, 40)} />
+          )}
         </div>
       </div>
     </SeoPage>

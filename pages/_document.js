@@ -41,7 +41,7 @@ export default function Document() {
       <div className=" sm:mt-20 mt-24 md:mt-32"></div>
 
       <ins
-        class="adsbygoogle"
+        className="adsbygoogle"
         style={{
           display: "block",
           backgroundColor: "#eee9",

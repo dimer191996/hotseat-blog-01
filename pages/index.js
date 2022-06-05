@@ -1,16 +1,13 @@
 import axios from "axios";
-import SmallCard from "../components/SmallCard";
-import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
-import ArticleCard from "../components/ArticleCard";
-import WithScreen from "../Layouts/WithScreen";
-import SubscribeNewsLatter from "../components/SubscribeNewsLatter";
+
 import SeoPage from "../components/SeoPage";
-import YoutubeChannel from "../components/YoutubeChannel";
-import FacebookGroup from "../components/FacebookGroup";
+import ArticleCard2 from "../components/ArticleCard2";
+import ArticlesSection from "../components/ArticlesSection";
+import WithScreen from "../Layouts/WithScreen";
 
 export async function getServerSideProps() {
-  const realityTv = await axios
-    .get(`${"https://hot-seat-app.herokuapp.com/api/"}articles/home/tv`, {
+  const articles = await axios
+    .get(`${"http://localhost:3020/api/hot/"}articles?page=0`, {
       timeout: 10000,
     })
     .then((res) => res.data.articles)
@@ -18,285 +15,120 @@ export async function getServerSideProps() {
       console.log(error.message);
     });
 
-  const stories = await axios
-    .get(
-      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/short`,
-      {
-        timeout: 10000,
-      }
-    )
-    .then((res) => res.data.articles)
-    .catch((error) => {
-      console.log(error.message);
-    });
-  const truecrime = await axios
-    .get(
-      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/truecrime`,
-      {
-        timeout: 10000,
-      }
-    )
-    .then((res) => res.data.articles)
-    .catch((error) => {
-      console.log(error.message);
-    });
-  const moviereviews = await axios
-    .get(
-      `${"https://hot-seat-app.herokuapp.com/api/"}articles/category/movie-review`,
-      {
-        timeout: 10000,
-      }
-    )
-    .then((res) => res.data.articles)
-    .catch((error) => {
-      console.log(error.message);
-    });
-
   return {
     props: {
-      realityTv: realityTv || [],
-      stories: stories || [],
-      truecrime: truecrime || [],
-      moviereviews: moviereviews || [],
+      articles: articles || [],
     },
   };
 }
 
-export default function Home({ realityTv, stories, truecrime, moviereviews }) {
+export default function Home({ articles }) {
   return (
     <SeoPage
       description={
         " Your source for entertainment news, celebrities,TLC & 90 Day Fiance news, and ​celebrity gossip, more...!"
       }
-      article={realityTv[0]}
+      article={articles[0]}
       hearder={
         " Your source for entertainment news, celebrities,90 Day Fiance news , Welcome"
       }
       category={"none"}
     >
-      <WithScreen width=" w-full px-2 lg:w-1/2">
-        <section className="">
-          <p className=" px-4 font-semibold text-md my-5 pb-5 border-b text-center">
-            Your source for entertainment news, celebrities,
-            <br /> TLC & 90 Day Fiance news, and ​celebrity gossip, more...!
-          </p>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4  border-b pb-5">
-            {realityTv.slice(0, 2)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}
-          </div>
-          <h2 className=" px-4 border-b font-bold text-2xl pb-5 pt-5 text-center">
-            Reality Tv News
-          </h2>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5 border-b">
-            {/* <FacebookGroup /> */}
-            {realityTv.slice(2, 6)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard article={data} />
-              </div>
-            ))}
-          </div>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              textAlign: "center",
-              overflow: "hidden",
-              backgroundColor: "#eeee",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-            data-full-width-responsive="true"
-          ></ins>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4  py-5">
-            {realityTv.slice(6, 8)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}
-            <section>
-              {realityTv.slice(8, 11)?.map((data) => (
-                <div key={data._id}>
-                  <SmallCard imgShow={false} article={data} />
-                </div>
+      <section className="">
+        <div className=" md:flex justify-center my-5 ">
+          <div className=" w-full md:w-2/3 px-4 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+              {articles?.slice(0, 4).map((data, index) => (
+                <ArticleCard2 key={data._id} h={96} article={data} />
               ))}
-            </section>
-            {realityTv.slice(11, 14)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}{" "}
-            {realityTv.slice(14, 18)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
+            </div>
           </div>
-        </section>
-        <ins
-          className="adsbygoogle"
-          style={{
-            display: "block",
-            textAlign: "center",
-            overflow: "hidden",
-            backgroundColor: "#eeee",
-          }}
-          data-ad-layout="in-article"
-          data-ad-format="fluid"
-          data-ad-client="ca-pub-4491397756399283"
-          data-ad-slot="2168142036"
-          data-full-width-responsive="true"
-        ></ins>
-        <section className="">
-          <h2 className=" px-4 font-bold text-xl  pt-5 text-center">
-            True Crime & Entertainment Stories
-          </h2>
-          <p className=" px-4 font-semibold text-md my-5 pb-5 border-b text-center">
-            Your source for entertainment news,
-            <br /> True Crime Strories, Life Hack, True Stories, Top 10 List ,
-            more...!
-          </p>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4 gap-y-4 ">
-            {truecrime.slice(0, 2)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}
+        </div>
+        <p className=" px-4 font-semibold text-2xl my-5 pb-5 text-center">
+          Your source for entertainment news, <br /> celebrities, TLC news, and
+          ​celebrity, <br /> more...!
+        </p>{" "}
+        <WithScreen width=" w-full px-2 lg:w-1/2">
+          <div className=" mb-5">
+            <div className=" separator text-left">
+              <h1 className=" text-4xl font-bold">Latest</h1>
+            </div>
+          </div>
+          <ArticlesSection articles={articles?.slice(4, 10)} />
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
           </div>
           <ins
             className="adsbygoogle"
             style={{
               display: "block",
-              textAlign: "center",
-              overflow: "hidden",
-              backgroundColor: "#eeee",
+              backgroundColor: "#eee9",
             }}
             data-ad-layout="in-article"
             data-ad-format="fluid"
             data-ad-client="ca-pub-4491397756399283"
             data-ad-slot="2168142036"
-            data-full-width-responsive="true"
           ></ins>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b md:gap-x-4 gap-y-4  py-5">
-            {stories.slice(0, 2)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}
-          </div>{" "}
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5">
-            <YoutubeChannel />
-            {stories.slice(2, 6)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-            <FacebookGroup />
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
+          </div>
+          <ArticlesSection articles={articles?.slice(10, 16)} />
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
           </div>
           <ins
             className="adsbygoogle"
             style={{
               display: "block",
-              textAlign: "center",
-              overflow: "hidden",
-              backgroundColor: "#eeee",
+              backgroundColor: "#eee9",
             }}
             data-ad-layout="in-article"
             data-ad-format="fluid"
             data-ad-client="ca-pub-4491397756399283"
             data-ad-slot="2168142036"
-            data-full-width-responsive="true"
           ></ins>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 border-b md:gap-x-4 gap-y-4   py-5">
-            {stories.slice(6, 8)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
           </div>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  py-5">
-            {/* <YoutubeChannel /> */}
-            {stories.slice(8, 12)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-            {/* <FacebookGroup /> */}
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block", backgroundColor: "#eeee" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-gq+t-1c-fj+xa"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="9911443569"
-              data-full-width-responsive="true"
-            ></ins>
+          <ArticlesSection articles={articles?.slice(16, 21)} />
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
           </div>
-        </section>
-        <ins
-          className="adsbygoogle"
-          style={{
-            display: "block",
-            textAlign: "center",
-            overflow: "hidden",
-            backgroundColor: "#eeee",
-          }}
-          data-ad-layout="in-article"
-          data-ad-format="fluid"
-          data-ad-client="ca-pub-4491397756399283"
-          data-ad-slot="2168142036"
-          data-full-width-responsive="true"
-        ></ins>
-        <section className="">
-          <h2 className="px-4 font-bold  pt-5 border-t text-xl my-5 text-center">
-            Movie & Tv Series Reviews
-          </h2>
-          <p className=" px-4 font-semibold text-md my-5 pb-5 border-b text-center">
-            Your source for entertainment news,
-            <br /> True Crime Strories, Life Hack, True Stories, Top 10 List ,
-            more...!
-          </p>
-          <div className=" grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-4  gap-y-4 ">
-            {moviereviews.slice(0, 2)?.map((data) => (
-              <div key={data._id}>
-                <ArticleCard article={data} />
-              </div>
-            ))}
-            {moviereviews.slice(2, 4)?.map((data) => (
-              <div key={data._id}>
-                <SmallCard imgShow={false} article={data} />
-              </div>
-            ))}
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block", backgroundColor: "#eeee" }}
-              data-ad-format="fluid"
-              data-ad-layout-key="-gq+t-1c-fj+xa"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="9911443569"
-              data-full-width-responsive="true"
-            ></ins>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              backgroundColor: "#eee9",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
           </div>
-        </section>
-        <ins
-          className="adsbygoogle"
-          style={{
-            display: "block",
-            textAlign: "center",
-            overflow: "hidden",
-            backgroundColor: "#eeee",
-          }}
-          data-ad-layout="in-article"
-          data-ad-format="fluid"
-          data-ad-client="ca-pub-4491397756399283"
-          data-ad-slot="2168142036"
-          data-full-width-responsive="true"
-        ></ins>
-      </WithScreen>
+          <ArticlesSection articles={articles?.slice(21, 35)} />
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
+          </div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              display: "block",
+              backgroundColor: "#eee9",
+            }}
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="2168142036"
+          ></ins>
+          <div className=" separator text-left">
+            <h1 className=" font-bold">ads</h1>
+          </div>
+          <ArticlesSection articles={articles?.slice(35, 49)} />
+        </WithScreen>
+      </section>
     </SeoPage>
   );
 }

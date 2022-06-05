@@ -7,6 +7,13 @@ import SeoArticle from "../../components/SeoArticles";
 import ShareArticle from "../../components/ShareArticle";
 import YoutubeChannel from "../../components/YoutubeChannel";
 import WithScreen from "../../Layouts/WithScreen";
+import ArticleMainImage from "../../components/ArticleMainImage";
+import Link from "next/link";
+import ArticleTags from "../../components/ArticleTags";
+import ArticlesSection2 from "../../components/ArticlesSection2";
+import ArticleCard from "../../components/ArticleCard";
+import ArticleCard2 from "../../components/ArticleCard2";
+import ForYouArticles from "../../components/ForYouArticles";
 
 export async function getServerSideProps({ params }) {
   const article = await axios
@@ -33,6 +40,18 @@ const Post = ({ article }) => {
     return moment(date).fromNow();
   };
 
+  const tags = article.tags;
+  const tagsArray = tags.split(" , ");
+  const tagsEl = () => {
+    return tagsArray.map((el) => (
+      <Link href={`/tag/${el}`}>
+        <span className="px-2 cursor-pointer underline text-cyan-600">
+          #{el.split("-")}
+        </span>
+      </Link>
+    ));
+  };
+
   return (
     <SeoArticle article={article}>
       <WithScreen width=" relative w-full  lg:w-[45%] md:w-[55%] ">
@@ -46,8 +65,11 @@ const Post = ({ article }) => {
                   Category :
                   <span className=" uppercase"> {article.category}</span>
                 </div>
-                <h1 className="font-black text-4xl  mb-5 ">{article.title}</h1>
 
+                <h1 className="font-black text-4xl ">{article.title}</h1>
+                <div className=" my-5">
+                  <ArticleTags t={article.tags} />{" "}
+                </div>
                 <h2 className=" font- text-xl text-gray-700  mb-5 ">
                   {article.description}
                 </h2>
@@ -72,13 +94,7 @@ const Post = ({ article }) => {
 
             <div className=" md:flex justify-center md:p-2">
               <div className="relative h-[20rem] w-full ">
-                <Image
-                  src={article.image}
-                  className=" rounded shadow-sm"
-                  objectFit="cover"
-                  layout="fill"
-                  alt={article.description}
-                />
+                <ArticleMainImage article={article} />
               </div>
             </div>
             <div className=" border-t px-4 flex bg-white flex-row items-center justify-between  my-5 ">
@@ -96,17 +112,9 @@ const Post = ({ article }) => {
               </h3> */}
                 </div>
               </div>
-              <div>🙏</div>
+              <div></div>
               <div>
-                <div className=" sticky top-10">
-                  <a href="https://www.buymeacoffee.com/hotseatmag">
-                    <img
-                      src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png"
-                      alt="Buy US A Coffee"
-                      className=" h-10"
-                    />
-                  </a>
-                </div>
+                <div className=" text-sm font-bold">3 min Read</div>
               </div>
             </div>
           </section>
@@ -153,6 +161,7 @@ const Post = ({ article }) => {
                 className="prose py-2  has-dropcap prose-xl mt-6  lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
               ></div>
+              <ForYouArticles />
               <div
                 className="prose prose-xl py-2   lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}

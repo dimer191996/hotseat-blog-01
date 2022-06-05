@@ -27,7 +27,7 @@ export default function MoreArticles({ category }) {
       <div className=" w-[90%]   my-5">
         <div className="h-6 text-center">{loading ? "loading" : ""}</div>
         <div className="">
-          {articles?.slice(0, 2).map((el, index) => (
+          {articles?.slice(1, 2).map((el, index) => (
             <SmallCard key={index} article={el} />
           ))}
           <ins

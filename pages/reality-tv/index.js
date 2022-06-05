@@ -1,4 +1,5 @@
 import axios from "axios";
+import ArticleCard2 from "../../components/ArticleCard2";
 import PageLayout from "../../Layouts/PageLayout";
 
 export default function HomeTv({ realityTv }) {
@@ -31,7 +32,7 @@ export default function HomeTv({ realityTv }) {
 }
 export async function getServerSideProps() {
   const realityTv = await axios
-    .get(`${"https://hot-seat-app.herokuapp.com/api/"}articles/tv`, {
+    .get(`${"http://localhost:3020/api/"}articles/tv`, {
       timeout: 10000,
     })
     .then((res) => res.data.articles)

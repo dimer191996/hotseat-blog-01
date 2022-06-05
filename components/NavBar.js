@@ -17,62 +17,19 @@ export default function NavBar() {
     {
       label: "Reality Tv",
       link: "/reality-tv",
-      topics: [
-        {
-          label: "TLC & 90 Day Fiance",
-          link: "/reality-tv/tlc-&-90-day-fiance",
-          tags: [
-            {
-              label: "Spoilers",
-              link: "/reality-tv/tlc-&-90-day-fiance/spoilers",
-            },
-            {
-              label: "Happilly Ever After",
-              link: "/reality-tv/tlc-&-90-day-fiance/happily-ever-after",
-            },
-          ],
-        },
-        // {
-        //   label: "Married at First Sight",
-        //   link: "/reality-tv/married-at-first-sight",
-        // },
-      ],
     },
     {
       label: "Movies & Enter...",
       link: "/movies-and-entertainement",
-      topics: [
-        {
-          label: "Movies",
-          link: "/movies-and-entertainment/movies",
-        },
-        {
-          label: "Stories & Facts",
-          link: "/movies-and-entertainment/stories",
-        },
-        {
-          label: "True Crime Stories",
-          link: "/movies-and-entertainment/true-crime",
-        },
-      ],
+    },
+
+    {
+      label: "Member Login",
+      link: "/login",
     },
     {
-      label: "More",
-      link: "/movies-and-entertainement",
-      topics: [
-        {
-          label: "Topics",
-          link: "/movies-and-entertainment/movies",
-        },
-        {
-          label: "Member Login",
-          link: "/login",
-        },
-        {
-          label: "Become Member",
-          link: "/register",
-        },
-      ],
+      label: "Become Member",
+      link: "/register",
     },
   ];
   const navEl = [
@@ -82,18 +39,13 @@ export default function NavBar() {
       icon: <HomeIcon className=" h-6 text-red-700" />,
     },
     {
-      name: "TV",
+      name: "Reality-TV",
       link: "/reality-tv",
       icon: <VideoCameraIcon className=" text-blue-700 h-6" />,
     },
     {
-      name: "Movies ",
+      name: "Stories ",
       link: "/movies-and-entertainment",
-      icon: <VideoCameraIcon className=" text-blue-700 h-6" />,
-    },
-    {
-      name: "Topics ",
-      link: "/topics",
       icon: <VideoCameraIcon className=" text-blue-700 h-6" />,
     },
 
@@ -150,11 +102,11 @@ export default function NavBar() {
         </div>
         <div className=" ease-in-out duration-500 transition bg-white">
           {showMenu ? (
-            <ul className=" md:flex m-2 ">
+            <ul className=" grid grid-cols-2 m-2 ">
               {categories.map((el, n) => (
                 <ul key={n} className="  ml-5 px-2 space-y-4">
                   <Link href={el.link}>
-                    <li className=" text-lg font-bold border-b  line-clamp-1">
+                    <li className="cursor-pointer text-blue-900 hover:to-blue-700  text-lg font-bold border-b  line-clamp-1">
                       {el.label}
                     </li>
                   </Link>

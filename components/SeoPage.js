@@ -4,10 +4,6 @@ let conanical = (category) => {
   switch (category) {
     case "tv":
       return "reality-tv";
-    case "happyEverAfter":
-      return "reality-tv/";
-    case "spoilers":
-      return "reality-tv/";
     case "movie-review":
       return "movies-and-entertainment";
     case "truecrime":
@@ -27,7 +23,7 @@ const SeoPage = ({ article, hearder, category, description, children }) => (
       defaultTitle={article?.title}
       description={description}
       canonical={`https://www.hotseatmag.com/${conanical(
-        category || article.category
+        category || article?.category
       )}`}
       openGraph={{
         title: article?.title,
@@ -42,9 +38,9 @@ const SeoPage = ({ article, hearder, category, description, children }) => (
           authors: [
             `https://www.hotseatmag.com/author/${article?.author
               .trim()
-              .replace(" ", "-")}`,
+              .replace(/ /g, "-")}`,
           ],
-          tags: [`90 Day Fiance : ${article?.category}`],
+          tags: [`${article?.tags}`],
         },
         images: [
           {
