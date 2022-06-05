@@ -5,11 +5,13 @@ import ArticlesSection2 from "../../components/ArticlesSection2";
 import SeoPage from "../../components/SeoPage";
 
 export async function getServerSideProps({ params }) {
-  console.log(`${"http://localhost:3020/api/"}tag/articles/` + params.tag);
   const articles = await axios
-    .get(`${"http://localhost:3020/api/"}tag/articles/` + params.tag, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://hot-seat-app.herokuapp.com/api/"}tag/articles/` + params.tag,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch(({ err }) => console.log(err));
 

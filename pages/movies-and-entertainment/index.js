@@ -17,9 +17,12 @@ export default function HomeMovies({ ME }) {
 }
 export async function getStaticProps() {
   const ME = await axios
-    .get(`${"http://localhost:3020/api/"}articles/home/movies-entertainment`, {
-      timeout: 10000,
-    })
+    .get(
+      `${"https://hot-seat-app.herokuapp.com/api/"}articles/home/movies-entertainment`,
+      {
+        timeout: 10000,
+      }
+    )
     .then((res) => res.data.articles)
     .catch((error) => {
       console.log(error.message);
