@@ -13,6 +13,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/reality-tv/tlc-&-90-day-fiance",
+        destination: "/reality-tv",
+        permanent: true,
+      },
+      {
+        source: "/movies-and-entertainment/stories",
+        destination: "/movies-and-entertainment",
+        permanent: true,
+      },
+      {
         source: "/tv/tlc/90-day-fiance",
         destination: "/reality-tv",
         permanent: true,
@@ -29,17 +39,17 @@ const nextConfig = {
       },
       {
         source: "/stories",
-        destination: "/movies-and-entertainment/stories",
+        destination: "/movies-and-entertainment",
         permanent: true,
       },
       {
         source: "/movie-reviews",
-        destination: "/movies-and-entertainment/movies",
+        destination: "/movies-and-entertainment",
         permanent: true,
       },
       {
         source: "/hot/topics",
-        destination: "/#topics",
+        destination: "/",
         permanent: true,
       },
     ];
