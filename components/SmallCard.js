@@ -2,6 +2,7 @@ import { ChevronDoubleRightIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ArticleMainImage from "./ArticleMainImage";
 import ArticleTags from "./ArticleTags";
 
 export default function SmallCard({
@@ -16,13 +17,7 @@ export default function SmallCard({
         <div className={`${imgShow ? "flex" : ""}  p-1 `}>
           {imgShow && (
             <div className={"relative " + imgSize}>
-              <Image
-                src={article.image}
-                alt={article.description}
-                className=" rounded shadow-sm"
-                objectFit="cover"
-                layout="fill"
-              />
+              <ArticleMainImage article={article} />
             </div>
           )}
 
