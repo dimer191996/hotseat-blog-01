@@ -45,8 +45,8 @@ export default function Home({ articles }) {
           </div>
         </div>
         <p className=" px-4 font-semibold text-2xl my-5 pb-5 text-center">
-          Your source for Entertainment news, Stories , Celebrities, Reality Tv
-          news , and much more...!
+          Your source for Entertainment news, Stories ,<br /> Celebrities,
+          Reality Tv news , and much more...!
         </p>{" "}
         <WithScreen width=" w-full px-2 lg:w-1/2">
           <div className=" mb-5">
@@ -58,17 +58,7 @@ export default function Home({ articles }) {
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              backgroundColor: "#eee9",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
+
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
@@ -76,17 +66,7 @@ export default function Home({ articles }) {
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              backgroundColor: "#eee9",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
+
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
@@ -94,17 +74,7 @@ export default function Home({ articles }) {
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              backgroundColor: "#eee9",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
+
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
@@ -112,17 +82,7 @@ export default function Home({ articles }) {
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              backgroundColor: "#eee9",
-            }}
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4491397756399283"
-            data-ad-slot="2168142036"
-          ></ins>
+
           <div className=" separator text-left">
             <h1 className=" font-bold">ads</h1>
           </div>
