@@ -56,7 +56,8 @@ export default function FloatingButton({ hidebutton, showbutton, hideHeader }) {
 
         <Link href="/subscription">
           <div className=" h-8 text-gray-100 flex justify-center items-center px-3 border border-green-700 w-full rounded bg-green-600 ">
-            Subscribe Newsletter
+            {hideHeader && "Click Here To Subscribe"}{" "}
+            {!hideHeader && "Subscribe Newsletter"}
           </div>
         </Link>
       </div>

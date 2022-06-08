@@ -22,15 +22,17 @@ export default function ForYouArticles() {
 
   return (
     <div>
-      <div className=" separator">
-        Articles Recomended For You
-        {loading && <div className="nimate-spin h-5 w-5 mr-3"></div>}
+      <div className=" separator font-bold">
+        <div className=" border p-1 rounded-lg">
+          <span className=" text-red-500">Sorry to interupt ,</span> <br />
+          Some Articles Recomended For You .{loading && "loading..."}
+        </div>
       </div>
       <div className="mt-4 mb-3">
         <div className="not-prose relative  overflow-hidden">
           <div className="relative overflow-auto">
             <div className="   mx-auto   min-w-0 ">
-              <div className="snap-x overflow-x-auto scrollbar-hide flex">
+              <div className="snap-x overflow-x-auto scrollbar-hide md:scrollbar-default flex">
                 {articles.map((article) => (
                   <div
                     key={article._id}

@@ -150,9 +150,6 @@ const Post = ({ article }) => {
 
           <section className="px-4 md:px-0">
             <div className="mt-5">
-              {article.sanitizedHTML && (
-                <YoutubeChannel title={article.title} video={article.video} />
-              )}
               <div
                 className="prose py-2  has-dropcap prose-xl mt-6  lg:prose-xl   prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML }}
@@ -162,16 +159,10 @@ const Post = ({ article }) => {
                 className="prose prose-xl py-2   lg:prose-xl first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML1 }}
               ></div>
-              <div className="separator"></div>
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="3538660225"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
-              <div className="separator"></div>
+              {article.sanitizedHTML && (
+                <YoutubeChannel title={article.title} video={article.video} />
+              )}
+
               <div
                 className="prose prose-xl py-2  lg:prose-xl  first-letter:text-2xl  first-letter:font-black  prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML2 }}
@@ -183,10 +174,16 @@ const Post = ({ article }) => {
               <div className="separator"></div>
               <ins
                 className="adsbygoogle"
-                style={{ display: "block" }}
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  overflow: "hidden",
+                  backgroundColor: "#eeee",
+                }}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
                 data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="3538660225"
-                data-ad-format="auto"
+                data-ad-slot="2168142036"
                 data-full-width-responsive="true"
               ></ins>
               <div className="separator"></div>

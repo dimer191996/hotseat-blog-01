@@ -7,7 +7,7 @@ import ArticleTags from "./ArticleTags";
 export default function ArticleCard2({ article, h, scroll }) {
   return (
     <div>
-      <div className="relative w-full h-64   cursor-pointer ">
+      <div className="relative w-full h-64 rounded-lg overflow-hidden   cursor-pointer ">
         <ArticleMainImage article={article} />
         <Link href={`/article/${article.slug}`}>
           <div className=" h-full w-full bg-gradient-to-t from-black opacity-80 "></div>

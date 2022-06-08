@@ -5,7 +5,13 @@ export default function YoutubeChannel(props) {
     <>
       {props.video && (
         <>
-          <div className=" separator">Video Recomended For You</div>
+          <div className=" separator font-bold">
+            <div className=" border p-1 rounded-lg">
+              <span className=" text-red-500">Sorry to interupt ,</span> <br />
+              This Video Was Recomended For You .
+            </div>
+          </div>
+
           <div className=" flex justify-center items-center">
             <iframe
               height="315"
