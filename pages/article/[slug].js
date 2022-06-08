@@ -164,8 +164,8 @@ const Post = ({ article }) => {
               ></div>
               <div className="separator"></div>
               <ins
-                class="adsbygoogle"
-                style="display:block"
+                className="adsbygoogle"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-4491397756399283"
                 data-ad-slot="3538660225"
                 data-ad-format="auto"
@@ -182,8 +182,8 @@ const Post = ({ article }) => {
               ></div>
               <div className="separator"></div>
               <ins
-                class="adsbygoogle"
-                style="display:block"
+                className="adsbygoogle"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-4491397756399283"
                 data-ad-slot="3538660225"
                 data-ad-format="auto"
