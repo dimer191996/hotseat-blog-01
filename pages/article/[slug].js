@@ -10,9 +10,6 @@ import WithScreen from "../../Layouts/WithScreen";
 import ArticleMainImage from "../../components/ArticleMainImage";
 import Link from "next/link";
 import ArticleTags from "../../components/ArticleTags";
-import ArticlesSection2 from "../../components/ArticlesSection2";
-import ArticleCard from "../../components/ArticleCard";
-import ArticleCard2 from "../../components/ArticleCard2";
 import ForYouArticles from "../../components/ForYouArticles";
 
 export async function getServerSideProps({ params }) {
@@ -153,7 +150,6 @@ const Post = ({ article }) => {
 
           <section className="px-4 md:px-0">
             <div className="mt-5">
-              {" "}
               {article.sanitizedHTML && (
                 <YoutubeChannel title={article.title} video={article.video} />
               )}

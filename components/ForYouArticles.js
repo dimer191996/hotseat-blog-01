@@ -23,8 +23,8 @@ export default function ForYouArticles() {
   return (
     <div>
       <div className=" separator">
-        Articles Recomended For You{" "}
-        <div className="nimate-spin h-5 w-5 mr-3"></div>{" "}
+        Articles Recomended For You
+        {loading && <div className="nimate-spin h-5 w-5 mr-3"></div>}
       </div>
       <div className="mt-4 mb-3">
         <div className="not-prose relative  overflow-hidden">
