@@ -164,17 +164,11 @@ const Post = ({ article }) => {
               ></div>
               <div className="separator"></div>
               <ins
-                className="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  overflow: "hidden",
-                  backgroundColor: "#eeee",
-                }}
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
+                class="adsbygoogle"
+                style="display:block"
                 data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
+                data-ad-slot="3538660225"
+                data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
               <div className="separator"></div>
@@ -188,17 +182,11 @@ const Post = ({ article }) => {
               ></div>
               <div className="separator"></div>
               <ins
-                className="adsbygoogle"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  overflow: "hidden",
-                  backgroundColor: "#eeee",
-                }}
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
+                class="adsbygoogle"
+                style="display:block"
                 data-ad-client="ca-pub-4491397756399283"
-                data-ad-slot="2168142036"
+                data-ad-slot="3538660225"
+                data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
               <div className="separator"></div>
