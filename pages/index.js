@@ -26,11 +26,11 @@ export default function Home({ articles }) {
   return (
     <SeoPage
       description={
-        " Your source for entertainment news, celebrities,TLC & 90 Day Fiance news, and ​celebrity gossip, more...!"
+        "   Your source for Entertainment news, Stories , Celebrities, Reality Tv more...!"
       }
       article={articles[0]}
       hearder={
-        " Your source for entertainment news, celebrities,90 Day Fiance news , Welcome"
+        " Your source for entertainment , celebrities ,Reality Tv , and much more"
       }
       category={"none"}
     >
@@ -45,8 +45,8 @@ export default function Home({ articles }) {
           </div>
         </div>
         <p className=" px-4 font-semibold text-2xl my-5 pb-5 text-center">
-          Your source for entertainment news, <br /> celebrities, TLC news, and
-          ​celebrity, <br /> more...!
+          Your source for Entertainment news, Stories , Celebrities, Reality Tv
+          news , and much more...!
         </p>{" "}
         <WithScreen width=" w-full px-2 lg:w-1/2">
           <div className=" mb-5">
