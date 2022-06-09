@@ -24,8 +24,8 @@ export default function ForYouArticles() {
     <div>
       <div className=" separator font-bold">
         <div className=" border p-1 rounded-lg">
-          <span className=" text-red-500">Sorry to interupt ,</span> <br />
-          Some Articles Recomended For You .{loading && "loading..."}
+          {/* <span className=" text-red-500">Sorry to interupt ,</span> <br /> */}
+          Articles Recomended For You .{loading && "loading..."}
         </div>
       </div>
       <div className="mt-4 mb-3">
@@ -33,7 +33,7 @@ export default function ForYouArticles() {
           <div className="relative overflow-auto">
             <div className="   mx-auto   min-w-0 ">
               <div className="snap-x overflow-x-auto scrollbar-hide md:scrollbar-default flex">
-                {articles.map((article) => (
+                {articles.slice(5).map((article) => (
                   <div
                     key={article._id}
                     className=" snap-center flex-none  h-64 w-64 rounded overflow-hidden m-2 "

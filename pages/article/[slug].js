@@ -192,7 +192,7 @@ const Post = ({ article }) => {
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
             </div>{" "}
-            <div id="comment">
+            <div id="comment" className=" border-t border-b my-5">
               <div className=" font-bold ">
                 <div
                   className="fb-comments"
@@ -203,22 +203,6 @@ const Post = ({ article }) => {
                 ></div>
               </div>
             </div>
-            <div className="separator">Ads</div>
-            <ins
-              className="adsbygoogle"
-              style={{
-                display: "block",
-                textAlign: "center",
-                overflow: "hidden",
-                backgroundColor: "#eeee",
-              }}
-              data-ad-layout="in-article"
-              data-ad-format="fluid"
-              data-ad-client="ca-pub-4491397756399283"
-              data-ad-slot="2168142036"
-              data-full-width-responsive="true"
-            ></ins>
-            <div className="separator"></div>
             <section>
               <div className=" space-y-2">
                 <p className=" text-3xl font-bold">

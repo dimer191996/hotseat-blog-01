@@ -51,7 +51,31 @@ export default function MoreArticles({ category }) {
             data-ad-slot="9911443569"
             data-full-width-responsive="true"
           ></ins>
-          {articles?.slice(5, 10).map((el, index) => (
+          {articles?.slice(5, 8).map((el, index) => (
+            <SmallCard key={index} article={el} />
+          ))}
+          <ins
+            class="adsbygoogle"
+            style={{ display: "block", backgroundColor: "#eeee" }}
+            data-ad-format="fluid"
+            data-ad-layout-key="-gq+t-1c-fj+xa"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="9911443569"
+            data-full-width-responsive="true"
+          ></ins>
+          {articles?.slice(8, 11).map((el, index) => (
+            <SmallCard key={index} article={el} />
+          ))}
+          <ins
+            class="adsbygoogle"
+            style={{ display: "block", backgroundColor: "#eeee" }}
+            data-ad-format="fluid"
+            data-ad-layout-key="-gq+t-1c-fj+xa"
+            data-ad-client="ca-pub-4491397756399283"
+            data-ad-slot="9911443569"
+            data-full-width-responsive="true"
+          ></ins>
+          {articles?.slice(11, 15).map((el, index) => (
             <SmallCard key={index} article={el} />
           ))}
         </div>
