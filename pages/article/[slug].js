@@ -191,6 +191,17 @@ const Post = ({ article }) => {
                 className="prose prose-xl py-2  lg:prose-xl  first-letter:text-2xl  first-letter:font-black prose-a:text-red-800"
                 dangerouslySetInnerHTML={{ __html: article.sanitizedHTML4 }}
               ></div>
+            </div>{" "}
+            <div id="comment">
+              <div className=" font-bold ">
+                <div
+                  className="fb-comments"
+                  data-href={`https://www.hotseatmag.com/article/${article.slug}`}
+                  data-numposts="5"
+                  data-width="100%"
+                  data-colorscheme="light"
+                ></div>
+              </div>
             </div>
             <div className="separator">Ads</div>
             <ins
@@ -207,13 +218,7 @@ const Post = ({ article }) => {
               data-ad-slot="2168142036"
               data-full-width-responsive="true"
             ></ins>
-            <div className="separator">Ads</div>
-
-            <div id="comment" className=" h-20 ">
-              <div className=" font-bold bg-gray-100 rounded-lg flex justify-center">
-                <p> Comming Soon, We're Working the comment section</p>
-              </div>
-            </div>
+            <div className="separator"></div>
             <section>
               <div className=" space-y-2">
                 <p className=" text-3xl font-bold">

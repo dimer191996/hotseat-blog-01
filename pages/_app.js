@@ -30,6 +30,15 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
+      <div id="fb-root"></div>
+      <Script
+        strategy="afterInteractive"
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0&appId=321461765200716&autoLogAppEvents=1"
+        nonce="FHBSVGIF"
+      />
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-VCL4RNBM4L}`}
