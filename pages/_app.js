@@ -2,11 +2,29 @@ import "../styles/globals.css";
 import Default from "../Layouts/Default";
 import Script from "next/script";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    }
+  }, [router.asPath]);
+
+  useEffect(() => {
+    var fb = document.getElementsByClassName("fb-comments").length;
+    for (var i = 0; i < fb; i++) {
+      try {
+        (fbcomments = window.fbcomments || []).push({});
+      } catch (e) {}
+    }
+  }, [router.asPath]);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -19,26 +37,8 @@ function MyApp({ Component, pageProps }) {
       router.events.off("hashChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
-  useEffect(() => {
-    var ads = document.getElementsByClassName("adsbygoogle").length;
-    for (var i = 0; i < ads; i++) {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {}
-    }
-  }, []);
   return (
     <>
-      <div id="fb-root"></div>
-      <Script
-        strategy="afterInteractive"
-        async
-        defer
-        crossorigin="anonymous"
-        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0&appId=321461765200716&autoLogAppEvents=1"
-        nonce="FHBSVGIF"
-      />
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-VCL4RNBM4L}`}

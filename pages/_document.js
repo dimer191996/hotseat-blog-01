@@ -52,6 +52,14 @@ export default function Document() {
         data-ad-slot="2168142036"
       ></ins>
       <body>
+        <div id="fb-root"></div>
+        <script
+          async
+          defer
+          crossorigin="anonymous"
+          src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0&appId=321461765200716&autoLogAppEvents=1"
+          nonce="FHBSVGIF"
+        />
         <Main />
         <NextScript />
       </body>
