@@ -5,6 +5,7 @@ const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
   const baseUrl = "https://www.hotseatmag.com";
+  const nothing = "hello world";
 
   const staticPages = fs
     .readdirSync("pages")
