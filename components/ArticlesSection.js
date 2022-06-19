@@ -27,6 +27,12 @@ export default function ArticlesSection({ articles, tagPage }) {
           </div>
         ))}
       </section>
+<<<<<<< HEAD
+=======
+      
+
+
+>>>>>>> e4ee4a754b6bf0c7292be827ef337ef9ddcb6d87
     </>
   );
 }
