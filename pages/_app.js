@@ -18,15 +18,6 @@ function MyApp({ Component, pageProps }) {
   }, [router.asPath]);
 
   useEffect(() => {
-    var fb = document.getElementsByClassName("fb-comments").length;
-    for (var i = 0; i < fb; i++) {
-      try {
-        (fbcomments = window.fbcomments || []).push({});
-      } catch (e) {}
-    }
-  }, [router.asPath]);
-
-  useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };

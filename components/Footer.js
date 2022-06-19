@@ -5,7 +5,7 @@ import SocialMedia from "./SocialMedia";
 export default function Footer() {
   return (
     <div>
-      <footer className=" bg-white border-t dark:bg-gray-800">
+      <footer className=" bg-white dark:bg-gray-800">
         <div className="md:flex pb-10 pt-4 my  justify-center items-center ">
           <SocialMedia />
           <div className=" flex justify-center  pr-10">
@@ -21,7 +21,7 @@ export default function Footer() {
             ></iframe>
           </div>
         </div>
-        <Categories />
+
         <div className="flex mt-10 justify-center items-center">
           <div className=" lg:w-1/2 md:w-3/4 bg-slate-100 rounded-lg ">
             <ul className=" grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mt-4 px-3 font-semibold   sm:justify-center sm:mt-0">

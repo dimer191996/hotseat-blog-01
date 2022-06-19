@@ -27,19 +27,6 @@ export default function ArticlesSection({ articles, tagPage }) {
           </div>
         ))}
       </section>
-      <div className=" separator">Ads</div>
-      <ins
-        className="adsbygoogle"
-        style={{
-          display: "block",
-          backgroundColor: "#eee9",
-        }}
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
-        data-ad-client="ca-pub-4491397756399283"
-        data-ad-slot="2168142036"
-      ></ins>
-      <div className=" separator"></div>
     </>
   );
 }

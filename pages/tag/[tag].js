@@ -29,7 +29,7 @@ const articles = ({ articles, param }) => {
       article={articles[0]}
       description={articles[0]?.description}
       hearder={param.replace(/-/g, " ") + " | HotSeatMag"}
-      category={articles[0]?.category}
+      category={"empty"}
       title={param.replace(/-/g, " ") + " | HotSeatMag "}
     >
       <section className="">

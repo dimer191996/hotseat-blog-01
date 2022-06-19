@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://hotseatmag.com",
+  siteUrl: "http://localhost:3000/",
   generateRobotsTxt: false,
 };

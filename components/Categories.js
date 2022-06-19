@@ -7,44 +7,10 @@ export default function Categories() {
     {
       label: "Reality Tv",
       link: "/reality-tv",
-      topics: [
-        {
-          label: "TLC & 90 Day Fiance",
-          link: "/reality-tv/tlc-&-90-day-fiance",
-          tags: [
-            {
-              label: "Spoilers",
-              link: "/reality-tv/tlc-&-90-day-fiance/spoilers",
-            },
-            {
-              label: "Happilly Ever After",
-              link: "/reality-tv/tlc-&-90-day-fiance/happily-ever-after",
-            },
-          ],
-        },
-        {
-          label: "Married at First Sight",
-          link: "/reality-tv/married-at-first-sight",
-        },
-      ],
     },
     {
       label: "Movies & Entertainement",
       link: "/movies-and-entertainement",
-      topics: [
-        {
-          label: "Movies",
-          link: "/movies-and-entertainment/movies",
-        },
-        {
-          label: "Stories & Facts",
-          link: "/movies-and-entertainment/stories",
-        },
-        {
-          label: "True Crime Stories",
-          link: "/movies-and-entertainment/true-crime",
-        },
-      ],
     },
   ];
   return (

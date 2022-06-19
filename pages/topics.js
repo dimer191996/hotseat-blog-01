@@ -3,11 +3,30 @@ import Link from "next/link";
 import Data from "../data/index.json";
 import MoreArticles from "../components/MoreArticles";
 import { useRouter } from "next/router";
+import Head from "next/head";
 export default function () {
   const [query, setQuery] = useState("");
   const router = useRouter();
   return (
     <div className=" absolute h-screen w-full top-0 bottom-0 bg-white z-50  ">
+      <Head>
+        <title>Search | HotSeatMag</title>
+
+        <meta
+          name="description"
+          content="Search All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+
+        <meta property="og:title" content="Search | HotSeatMag" />
+
+        <meta property="og:url" content="https://www.hotseatmag.com/topics" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:description"
+          content="All the latest movie news, movie trailers & reviews - and the same for TV, too."
+        />
+      </Head>
       <div className="py-3 items-center flex justify-center">
         <button
           onClick={() => router.back()}

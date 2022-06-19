@@ -22,6 +22,7 @@ export default function Document() {
       />
       <meta property="og:site_name" content="hotseatmag" />
 
+      <link rel="canonical" href="https://www.hotseatmag.com/" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
